@@ -9,7 +9,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-collapse: collapse; border-spacing: 0; }
 img{max-width:100%;}
 
-.base-index, .base-two, .base-three, .base-four{
+.base-index, .base-two, .base-three, .base-four, .base-five, .base-six, .base-seven{
    position:absolute;
    width:100%;
    height:100%;
@@ -17,11 +17,14 @@ img{max-width:100%;}
    /*background-color: yellow;*/
    text-align: center;
 }
-.base-index, .base-three, .base-four{
+.base-index, .base-three, .base-four, .base-six, .base-seven{
    background-image: url("../images/m.png");
 }
 .base-two{
    background-image: url("../images/n.png");
+}
+.base-five{
+   background-image: url("../images/o.png");
 }
 
 .index-mouse, .index-computer, .two-mouse, .three-mouse{
@@ -34,20 +37,20 @@ img{max-width:100%;}
    font-family: Arial,"微软雅黑";
 }
 
-.index-logo, .two-logo{
+.index-logo, .two-logo, .five-logo{
    position:absolute;
    /*height:200px;*/
    width:100%;
 
    /*background-color: #fff;*/
 }
-.logo-img, .two-img{
+.logo-img, .two-img, .five-img{
    height:150px;
    width:150px;
    margin:0 auto;
    /*background-color: red;*/
 }
-.logo-img .wrap, .two-img.wrap{
+.logo-img .wrap, .two-img.wrap, .five-img.wrap{
    height:150px;
    width:150px;
    border-radius: 75px;
@@ -57,7 +60,7 @@ img{max-width:100%;}
    background-color: #fff;
    overflow: hidden;
 }
-.logo-img .wrap .img, .two-img.wrap.img{
+.logo-img .wrap .img, .two-img.wrap.img, .five-img.wrap.img{
    width:100%;
    max-height:150px;
    display:inline-block;
@@ -65,8 +68,7 @@ img{max-width:100%;}
 .parting-line{
    width:100%;
    height:1px;
-   border-bottom:
-   1px dashed #000;
+   border-bottom: 1px dashed #000;
 }
 
 /*
@@ -108,7 +110,7 @@ img{max-width:100%;}
 *
 *  two css
 */
-.two-top{
+.two-top, .five-top{
    /*position:fixed;*/
    margin-top:-60px;
 }
@@ -147,14 +149,14 @@ img{max-width:100%;}
    background-color: yellow;
    padding:10px;
 }
-.two-logo{
+.two-logo, .five-logo{
    top:55px;
 }
-.two-img{
+.two-img, .five-img{
    height:120px;
    width:120px;
 }
-.two-img.wrap{
+.two-img.wrap, .five-img.wrap{
    height:120px;
    width:120px;
    border-radius: 60px
@@ -163,16 +165,16 @@ img{max-width:100%;}
 /*
 *   three.html    four.html
 */
-.three-top, .four-top{
+.three-top, .four-top, .six-top, .seven-top{
    width:80%;
    margin-top:40px;
    background-color: #fff;
    display:inline-block;
 }
-.three-top>div, .four-top>div{
+.three-top>div, .four-top>div, .six-top>div, .seven-top>div{
    margin:15px auto;
 }
-.three-title{
+.three-title, .six-title, .seven-title{
    width:100%;
    text-align: center;  
    font-size: 30px;      
@@ -250,4 +252,98 @@ img{max-width:100%;}
    padding:10px;
    font-size: 18px; 
    color:red;
+}
+
+/*
+*   five.html
+*/
+.five-poster{
+   font-size: 35px;
+   margin-top:120px;
+}
+.five-site{
+   width:100%;
+   text-align: center;
+   line-height: 25px;
+   margin-top: 50px;
+}
+.five-btn, .seven-btn{
+   margin-top: 40px;
+   display:inline-block;
+}
+.five-btn button, .seven-btn button{
+   background-color: transparent;
+   font-size: 25px;
+   border:solid 1px #d00;
+   width:150px;
+}
+
+/*
+*  six.html
+*/
+/*.base-six{
+   padding: 0px 10px;
+}*/
+.six-top, .seven-top{
+   background-color: transparent;
+   width:90%;
+}
+.six-name, .six-welfare, .seven-duty, .seven-require{
+   margin-top: 15px;
+   padding:0px 20px;
+   display:inline-block;
+}
+.six-name-title, .six-welfare-title{
+   font-size: 30px;
+}
+.six-name-require, .six-welfare-message{
+   margin-top: 15px;
+   font-size: 20px;
+
+}
+.six-name-require{
+   color:red;
+}
+.six-welfare-message{
+   color:#fff;
+}
+.six-name-require span, .six-welfare-message span{
+   float:left;
+   display:inline-block;
+   padding:5px;
+   margin:5px;
+}
+.six-name-require span{
+   border:solid 1px #d00;
+}
+.six-welfare-message span{
+   background-color: red;
+}
+
+/*
+*  seven.html
+*/
+.seven-duty, .seven-require{
+   float:left;
+   display:inline-block;
+}
+
+.seven-duty-title, .seven-require-title{
+   font-size: 20px; 
+   color:red;
+   float:left;
+}
+.seven-duty-content, .seven-require-content{
+   padding:0px 20px; 
+   float:left;
+}
+.seven-duty-content ul, .seven-require-content ul{
+   list-style-type:decimal;
+   text-align: left;
+   padding-left:10px;
+   line-height: 25px;
+}
+.seven-duty-content ul li, .seven-require-content ul li{
+   float:left;
+   width:100%;
 }
