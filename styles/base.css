@@ -9,7 +9,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 table { border-collapse: collapse; border-spacing: 0; }
 img{max-width:100%;}
 
-.base-index, .base-two{
+.base-index, .base-two, .base-three, .base-four{
    position:absolute;
    width:100%;
    height:100%;
@@ -17,21 +17,56 @@ img{max-width:100%;}
    /*background-color: yellow;*/
    text-align: center;
 }
-.base-index{
+.base-index, .base-three, .base-four{
    background-image: url("../images/m.png");
 }
 .base-two{
    background-image: url("../images/n.png");
 }
 
-.index-mouse, .index-computer, .two-mouse{
+.index-mouse, .index-computer, .two-mouse, .three-mouse{
    position:absolute;
 }
-.index-mouse, .two-mouse{
+.index-mouse, .two-mouse, .three-mouse{
    bottom: 0px;
 }
 .index-title div span , .two-center div span{
    font-family: Arial,"微软雅黑";
+}
+
+.index-logo, .two-logo{
+   position:absolute;
+   /*height:200px;*/
+   width:100%;
+
+   /*background-color: #fff;*/
+}
+.logo-img, .two-img{
+   height:150px;
+   width:150px;
+   margin:0 auto;
+   /*background-color: red;*/
+}
+.logo-img .wrap, .two-img.wrap{
+   height:150px;
+   width:150px;
+   border-radius: 75px;
+   display:table-cell;
+   text-align: center;
+   vertical-align: middle;
+   background-color: #fff;
+   overflow: hidden;
+}
+.logo-img .wrap .img, .two-img.wrap.img{
+   width:100%;
+   max-height:150px;
+   display:inline-block;
+}
+.parting-line{
+   width:100%;
+   height:1px;
+   border-bottom:
+   1px dashed #000;
 }
 
 /*
@@ -65,39 +100,16 @@ img{max-width:100%;}
 .index-middle{
    padding-top:30px;
 }
-
 .index-logo{
-   position:absolute;
-   /*height:200px;*/
-   width:100%;
-   bottom: 35px;
+   bottom:35px;
 }
-.logo-img{
-   height:150px;
-   width:150px;
-   margin:0 auto;
-   /*background-color: red;*/
-}
-.logo-img .wrap{
-   height:150px;
-   width:150px;
-   border-radius: 75px;
-   display:table-cell;
-   text-align: center;
-   vertical-align: middle;
-   background-color: #fff;
-   overflow: hidden;
-}
-.logo-img .wrap .img{
-   width:100%;
-   max-height:150px;
-   display:inline-block;
-}
+
 /*
 *
 *  two css
 */
 .two-top{
+   /*position:fixed;*/
    margin-top:-60px;
 }
 .two-center{
@@ -111,6 +123,9 @@ img{max-width:100%;}
    background-color: #fff;
    overflow-y:scroll;
 }
+.two-center div::-webkit-scrollbar{
+   width:0px
+}
 .two-center div span{
    padding:15px;
    font-size: 20px;
@@ -119,4 +134,120 @@ img{max-width:100%;}
    letter-spacing: 2px;
    line-height: 30px;
 }
+.two-bottom{
+   margin-top:30px;
+}
+.two-bottom div{
+   margin:25px 10px;   
+}
+.two-bottom div span{
+   /*display:block;
+   min-width: 25%;*/
+   font-size: 20px;
+   background-color: yellow;
+   padding:10px;
+}
+.two-logo{
+   top:55px;
+}
+.two-img{
+   height:120px;
+   width:120px;
+}
+.two-img.wrap{
+   height:120px;
+   width:120px;
+   border-radius: 60px
+}
 
+/*
+*   three.html    four.html
+*/
+.three-top, .four-top{
+   width:80%;
+   margin-top:40px;
+   background-color: #fff;
+   display:inline-block;
+}
+.three-top>div, .four-top>div{
+   margin:15px auto;
+}
+.three-title{
+   width:100%;
+   text-align: center;  
+   font-size: 30px;      
+}
+.three-list, .four-list{
+   padding:0px 10px;
+   overflow:auto;
+}
+.three-list-l, .three-list-r, .four-list-l, .four-list-r{
+   width:50%;
+   font-size: 18px;
+   float:left;
+   margin:5px auto;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+.three-list-r, .four-list-r{
+   color:red;
+}
+.three-btn{
+   padding:20px;
+}
+.three-btn span{
+   padding:10px;
+   border: solid 1px #d00;
+   font-size: 25px;
+   color:red;
+}
+
+.four-top{
+   width:90%;
+}
+.four-title{
+   padding: 0px;
+   width:100%;
+   text-align: center;
+   height:70px;    
+}
+.four-logo, .font-details{
+   float:left;
+}
+.four-logo{
+   width:30%;
+   /*height:50px;*/
+   /*background-color: blue;*/
+}
+.four-logo div{
+   height:70px;
+   width:70px;
+   /*background-color: red;*/
+   margin:0px auto;
+}
+.four-logo>div>.img{
+   height:70px;
+   width:70px;
+   border-radius: 35px;
+   display:table-cell;
+   text-align: center;
+   vertical-align: middle;
+   overflow: hidden;
+   background-color: #fff;
+}
+.four-details{
+   width:70%;
+   font-size: 18px;
+   float:left;
+}
+.four-details div{
+   height:35px;
+   float:left;
+} 
+
+.four-bottom span{
+   padding:10px;
+   font-size: 18px; 
+   color:red;
+}
