@@ -70,7 +70,9 @@ img{max-width:100%;}
    height:1px;
    border-bottom: 1px dashed #000;
 }
-
+.div-border{
+   border: 1px dashed #000;
+}
 /*
 *
 *     index css     
@@ -129,8 +131,8 @@ img{max-width:100%;}
    width:0px
 }
 .two-center div span{
-   padding:15px;
-   font-size: 20px;
+   padding:25px;
+   font-size: 18px;
    float: left;
    text-align: left;
    letter-spacing: 2px;
@@ -287,6 +289,10 @@ img{max-width:100%;}
 .six-top, .seven-top{
    background-color: transparent;
    width:90%;
+   margin-top: auto;
+}
+.six-name, .six-welfare{
+   text-align: left;
 }
 .six-name, .six-welfare, .seven-duty, .seven-require{
    margin-top: 15px;
@@ -316,8 +322,14 @@ img{max-width:100%;}
 .six-name-require span{
    border:solid 1px #d00;
 }
+.six-welfare{
+   margin-bottom: 20px;
+}
+.six-welfare-message{
+   margin-bottom: 20px;
+}
 .six-welfare-message span{
-   background-color: red;
+   background-color: rgb(243,145,5);
 }
 
 /*
@@ -346,4 +358,10 @@ img{max-width:100%;}
 .seven-duty-content ul li, .seven-require-content ul li{
    float:left;
    width:100%;
+}
+.seven-btn{
+   margin-bottom: 40px;
+}
+.seven-top{
+   margin-top:auto;
 }
