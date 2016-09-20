@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+		.body{
+			position: absolute;
+			top: 150px;
+			width: 100%;
+			box-sizing:border-box;
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+		.contnet{
+			text-align: center;
+			border: 1px solid #ddd;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.contnet-reminder{
+			
+		}
+		.contnet-input{
+			height: 40px;
+			border-radius: 3px;
+			width: 100%;
+			border: 1px solid #ccc;
+			margin-bottom: 25px;
+		}
+		.logo{
+			width: 100%;
+			padding-right: 10px;
+			padding-left: 10px;
+			box-sizing: border-box;
+		}
+		.logo-btn{
+			width: 100%;
+			line-height: 40px;
+			border-radius: 3px;
+			background-color: #009900;
+			border: 0px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body style="margin:0px;">
+	<div class="body">
+		<div class="contnet">
+			<p class="contnet-reminder">请输入当前昵称</p>
+			<input type="text" class="contnet-input" placeholder="张三">
+		</div>
+		<div class="logo-btn">
+			<button class="logo-btn" onclick="logo()">保存</button>
+		</div>
+	</div>
+
+	<script>
+		function logo() {
+			 /* body... */
+			 alert("登陆");
+			 window.location.href = "index.html";
+		}
+	</script>
+</body>
+</html>
