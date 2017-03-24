@@ -1,4 +1,4 @@
-define(function() {
+define(["goBackToTop"], function(goBackToTop) {
     $("#tab1").pullToRefresh().on("pull-to-refresh", function() {
         setTimeout(function() {
             console.log(1);
@@ -65,4 +65,7 @@ define(function() {
             loading_4 = false;
         }, 2000);
     });
+
+    // go back top
+    goBackToTop.GoBackToTop("goBackTop","tab1");
 })

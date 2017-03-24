@@ -589,9 +589,9 @@ a {
     max-height: 100%;
     max-width: 100%; }
 
-.go-back-to-top {
+.go-back-top {
   background-size: 100%;
-  background-image: url(../img/go-back-to-top.png);
+  background-image: url(../img/go-back-top.png);
   position: fixed;
   z-index: 100;
   right: 8px;

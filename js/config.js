@@ -11,6 +11,10 @@ require.config({
         "zNetwork": "../lib/zNetwork",
         "snake": "../lib/zSnake",
         /*
+         * common
+        */
+        "goBackTop":"common/goBackTop",
+        /*
          * page
          */
         "index_weui": "page/index_weui",
