@@ -1,0 +1,43 @@
+.prj-title {
+    height: .9rem;
+    font-size: .3rem;
+    line-height: .9rem;
+    padding-left: .24rem;
+    color: $text-base;
+    background: #fff;
+    position: relative;
+    &.prj-title-active:active{
+        background: $background;
+    }
+    & a{
+        color: $text-base;
+    }
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border;
+        padding-right: .48rem;
+        .content {}
+        .footer {
+            font-size: .22rem;
+            color: $text-grey-hint;
+            &:after {
+                content: " ";
+                display: inline-block;
+                height: .15rem;
+                width: .15rem;
+                border-width: .02rem .02rem 0 0;
+                border-color: $text-grey-hint;
+                border-style: solid;
+                -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                position: relative;
+                top: -0.02rem;
+                position: absolute;
+                top: 50%;
+                margin-top: -0.08rem;
+                right: .24rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// common
+@import "common/_variable";
+@import "common/_utilities";
+@import "common/_reset";
+@import "common/_extendWeui";
+//common widget
+@import "common/_list";
+@import "common/_search";
+@import "common/_info";
+@import "common/_flow";
+@import "common/_title";
+@import "common/_banner";
+
+@import "common/_other";
+
+// page
+@import "page/_index_weui";

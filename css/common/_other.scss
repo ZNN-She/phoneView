@@ -1,0 +1,15 @@
+// GoBack
+.go-back-to-top {
+    background-size: 100%;
+    background-image: url(../img/go-back-to-top.png);
+    position: fixed;
+    z-index: 100;
+    right: 8px;
+    bottom: 68px;
+    width: 35px;
+    height: 35px;
+}
+
+.prj-interval-row {
+    margin-bottom: .2rem;
+}

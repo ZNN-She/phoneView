@@ -1,0 +1,89 @@
+ //weui
+ .prj-cells {
+     margin-top: 0;
+     font-size: .3rem;
+     color: $text-base;
+     &:before {
+         border-top: 0;
+     }
+     &:after {
+         border-bottom: 0;
+     }
+     .weui-cell {
+         height: .8rem;
+         line-height: .8rem;
+         padding: 0 .24rem;
+         &:before {
+             border-top: 1px solid $border;
+             color: $border;
+         }
+         .weui-cell__ft {
+             color: $text-grey-hint;
+             font-size: .22rem;
+         }
+     }
+     .weui-cell.weui-cell_access .weui-cell__ft:after {
+         content: " ";
+         display: inline-block;
+         height: .15rem;
+         width: .15rem;
+         border-width: .02rem .02rem 0 0;
+         border-color: $text-grey-hint;
+         border-style: solid;
+         -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+         transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+         position: relative;
+         top: -0.02rem;
+         position: absolute;
+         top: 50%;
+         margin-top: -0.08rem;
+     }
+ }
+ 
+ //search
+ .weui-search-bar {
+     height: .88rem;
+     padding: .08rem .1rem;
+     .weui-search-bar__box {
+         padding: 0 0.3rem;
+         .weui-icon-search {
+             left: .1rem;
+             line-height: .72rem;
+             font-size: .24rem;
+         }
+         .weui-search-bar__input {
+             padding: .04rem 0;
+             padding-left: .15rem;
+             height: .64rem;
+             font-size: .24rem;
+             line-height: 0.64rem;
+         }
+         .weui-icon-clear {
+             padding: 0 0.1rem;
+             line-height: .72rem;
+             color: $text-grey-hint;
+             font-size: .28rem;
+         }
+     }
+     .weui-search-bar__label {
+         color: $text-grey-hint;
+         .weui-icon-search {
+             margin-right: .05rem;
+             line-height: .72rem;
+             font-size: .28rem;
+         }
+         span {
+             font-size: .28rem;
+         }
+     }
+     .weui-search-bar__cancel-btn {
+         margin-left: .1rem;
+         line-height: .72rem;
+         color: $text-green;
+     }
+ }
+
+ //weui-tabbar
+ .weui-tabbar__icon{
+    position: relative;
+ }

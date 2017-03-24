@@ -1,0 +1,50 @@
+.background-base{
+	background: $background;
+}
+.link-base{
+	color: $text-base;
+}
+
+.text-base{
+	color: $text-base;
+}
+.text-black{
+	color: $text-black;
+}
+.text-white{
+	color: $text-white;
+}
+.text-gery{
+	color: $text-grey;
+}
+.text-grey-hint{
+	color: $text-grey-hint;
+}
+.text-red{
+	color: $text-red;
+}
+.text-yellow{
+	color: $text-yellow;
+}
+.text-blue{
+	color: $text-blue;
+}
+.text-green{
+	color: $text-green;
+}
+
+.font-size-30{
+	font-size: .30rem;
+}
+.font-size-28, .font-size-title{
+	font-size: .28rem;
+}
+.font-size-24, .font-size-base{
+	font-size: .24rem;
+}
+.font-size-22{
+	font-size: .22rem;
+}
+.font-size-20{
+	font-size: .20rem;
+}

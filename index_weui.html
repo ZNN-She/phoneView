@@ -3,6 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <!-- 网易-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- 删除苹果默认的工具栏和菜单栏 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -32,32 +34,13 @@
     <!-- windows phone 点击无高光 -->
     <meta name="msapplication-tap-highlight" content="no">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="plugins/JQWeui/weui.css">
-    <link rel="stylesheet" href="plugins/JQWeui/jquery-weui.css">
-    <link rel="stylesheet" href="css/indexWeui.css">
+    <link rel="stylesheet" href="js/lib/JQWeui/weui.css">
+    <link rel="stylesheet" href="js/lib/JQWeui/jquery-weui.css">
+    <link rel="stylesheet" href="css/main_weui.css">
     <title>weui</title>
-    <style>
-    html {
-        font-size: 20px;
-    }
-    
-    html,
-    body {
-        height: 100%;
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    body {
-        overflow: hidden;
-    }
-    
-    .weui-tab .weui-tab__bd .weui-pull-to-refresh {
-        margin-top: -5rem;
-    }
-    </style>
 </head>
 
-<body ontouchstart>
+<body class="index-weui" ontouchstart>
     <div class="weui-tab">
         <div class="weui-tab__bd">
             <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh">
@@ -70,172 +53,167 @@
                     <div class="refresh">正在刷新</div>
                 </div>
                 <div class="content-padded">
-                    <div class="list-pannel">
-                        <ul class="list-pannel-normal">
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                    <div class="prj-top-banner">
+                        <img src="img/banner-1.png" alt="">
+                    </div>
+                    <!-- 列表 条状 -->
+                    <div class="prj-list">
+                        <ul class="prj-list-normal">
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            <span class="text-red">招募中</span>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            招募以结束
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            <span class="text-red">招募中</span>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            招募以结束
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            <span class="text-red">招募中</span>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            招募以结束
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            <span class="text-red">招募中</span>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
+                            <li class="list-normal-item">
+                                <div class="pic">
+                                    <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div><small>￥</small>1000/人</div>
+                                        <div class="ft">已报名12人</div>
                                     </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
+                                    <div class="content-ft">
+                                        <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                        <div class="bd">dsafasd</div>
+                                        <div class="ft">
+                                            招募以结束
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-hd">的沙发客爱的色放撒旦发多少撒旦发生撒旦发生士大夫撒手动阀</div>
-                                        <div class="d-bd">大厦快放假啊</div>
-                                        <div class="d-ft">
-                                            <div class="hd">dsafas</div>
-                                            <div class="bd">dsafasd</div>
-                                            <div class="ft">dsafasd</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li> -->
                         </ul>
                     </div>
+                    <!-- 回顶部按钮 -->
                     <span class="go-back-to-top"></span>
                 </div>
                 <!-- 上拉加载提示文字 -->
@@ -261,45 +239,10 @@
                     <div class="floor">
                         <div class="floor-title"></div>
                         <div class="floor-content">
-                            <div class="list-pannel">
-                                <ul class="list-pannel-square">
-                                    <li class="list-pannel-item">
-                                        <div class="item-content">
-                                            <div class="p">
-                                                <div class="p-inner">
-                                                    <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                                </div>
-                                            </div>
-                                            <div class="d">
-                                                <div class="d-title">
-                                                    的时间发链接阿里的是的撒放假啦涉及到法律
-                                                </div>
-                                                <div class="d-bd">123</div>
-                                                <div class="d-ft">
-                                                    是多少啊
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-pannel-item">
-                                        <div class="item-content">
-                                            <div class="p">
-                                                <div class="p-inner">
-                                                    <img src="http://gw1.alicdn.com/bao/uploaded/i4/TB1_EKdNVXXXXcZXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                                </div>
-                                            </div>
-                                            <div class="d">
-                                                <div class="d-title">
-                                                    的时间发链接阿里的是的撒放假啦涉及到法律
-                                                </div>
-                                                <div class="d-bd">123</div>
-                                                <div class="d-ft">
-                                                    是多少啊
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-pannel-item">
+                            <!-- 列表 块状 -->
+                            <div class="prj-list">
+                                <ul class="prj-list-square">
+                                    <li class="list-square-item">
                                         <div class="item-content">
                                             <div class="p">
                                                 <div class="p-inner">
@@ -317,7 +260,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list-pannel-item">
+                                    <li class="list-square-item">
                                         <div class="item-content">
                                             <div class="p">
                                                 <div class="p-inner">
@@ -335,11 +278,11 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list-pannel-item">
+                                    <li class="list-square-item">
                                         <div class="item-content">
                                             <div class="p">
                                                 <div class="p-inner">
-                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i4/TB1ShE0OXXXXXX7aXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
                                                 </div>
                                             </div>
                                             <div class="d">
@@ -353,11 +296,83 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="list-pannel-item">
+                                    <li class="list-square-item">
                                         <div class="item-content">
                                             <div class="p">
                                                 <div class="p-inner">
-                                                    <img src="http://gw2.alicdn.com/bao/uploaded/i3/TB1HDYSPVXXXXXVXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
+                                                </div>
+                                            </div>
+                                            <div class="d">
+                                                <div class="d-title">
+                                                    的时间发链接阿里的是的撒放假啦涉及到法律
+                                                </div>
+                                                <div class="d-bd">123</div>
+                                                <div class="d-ft">
+                                                    是多少啊
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-square-item">
+                                        <div class="item-content">
+                                            <div class="p">
+                                                <div class="p-inner">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
+                                                </div>
+                                            </div>
+                                            <div class="d">
+                                                <div class="d-title">
+                                                    的时间发链接阿里的是的撒放假啦涉及到法律
+                                                </div>
+                                                <div class="d-bd">123</div>
+                                                <div class="d-ft">
+                                                    是多少啊
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-square-item">
+                                        <div class="item-content">
+                                            <div class="p">
+                                                <div class="p-inner">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
+                                                </div>
+                                            </div>
+                                            <div class="d">
+                                                <div class="d-title">
+                                                    的时间发链接阿里的是的撒放假啦涉及到法律
+                                                </div>
+                                                <div class="d-bd">123</div>
+                                                <div class="d-ft">
+                                                    是多少啊
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-square-item">
+                                        <div class="item-content">
+                                            <div class="p">
+                                                <div class="p-inner">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
+                                                </div>
+                                            </div>
+                                            <div class="d">
+                                                <div class="d-title">
+                                                    的时间发链接阿里的是的撒放假啦涉及到法律
+                                                </div>
+                                                <div class="d-bd">123</div>
+                                                <div class="d-ft">
+                                                    是多少啊
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-square-item">
+                                        <div class="item-content">
+                                            <div class="p">
+                                                <div class="p-inner">
+                                                    <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
                                                 </div>
                                             </div>
                                             <div class="d">
@@ -373,6 +388,7 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- 回顶部按钮 -->
                             <span class="go-back-to-top"></span>
                         </div>
                     </div>
@@ -393,119 +409,135 @@
                     <div class="refresh">正在刷新</div>
                 </div>
                 <div class="content-padded">
-                    <div class="list-pannel">
-                        <ul class="list-pannel-square">
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i2/155560096/TB2fz1LdheI.eBjSsplXXX6GFXa_!!155560096.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
+                    <div class="prj-search prj-search-input">
+                        <div class="weui-search-bar" id="searchBar">
+                            <form class="weui-search-bar__form">
+                                <div class="weui-search-bar__box">
+                                    <i class="weui-icon-search"></i>
+                                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
                                 </div>
-                            </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw1.alicdn.com/bao/uploaded/i4/TB1_EKdNVXXXXcZXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i4/TB1ShE0OXXXXXX7aXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-pannel-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw2.alicdn.com/bao/uploaded/i3/TB1HDYSPVXXXXXVXVXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                                <label class="weui-search-bar__label" id="searchText">
+                                    <i class="weui-icon-search"></i>
+                                    <span>搜索</span>
+                                </label>
+                            </form>
+                            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+                        </div>
                     </div>
-                    <span class="go-back-to-top"></span>
+                    <div class="prj-list">
+                        <div class="prj-list-picture">
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-2.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- 上拉加载提示文字 -->
                 <div class="weui-loadmore">
@@ -522,14 +554,122 @@
                     <div class="up">释放刷新</div>
                     <div class="refresh">正在刷新</div>
                 </div>
-                <div class="content-padded">
-                    <h1 class="doc-head">页面四</h1>
-                    <p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》是最权威、最经典的人工智能教材，已被全世界100多个国家的1200多所大学用作教材。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》的最新版全面而系统地介绍了人工智能的理论和实践，阐述了人工智能领域的核心内容，并深入介绍了各个主要的研究方向。全书分为七大部分：第Ⅰ部分“人工智能”，第Ⅱ部分“问题求解”，第Ⅲ部分“知识、推理与规划”，第Ⅳ部分“不确定知识与推理”，第Ⅴ部分“学习”，第Ⅵ部分“通信、感知与行动”，第Ⅶ部分“结论”。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》既详细介绍了人工智能的基本概念、思想和算法，还描述了其各个研究方向最前沿的进展，同时收集整理了详实的历史文献与事件。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》适合于不同层次和领域的研究人员及学生，是高等院校本科生和研究生人工智能课的首选教材，也是相关领域的科研与工程技术人员的重要参考书。</p>
-                    <p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》是最权威、最经典的人工智能教材，已被全世界100多个国家的1200多所大学用作教材。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》的最新版全面而系统地介绍了人工智能的理论和实践，阐述了人工智能领域的核心内容，并深入介绍了各个主要的研究方向。全书分为七大部分：第Ⅰ部分“人工智能”，第Ⅱ部分“问题求解”，第Ⅲ部分“知识、推理与规划”，第Ⅳ部分“不确定知识与推理”，第Ⅴ部分“学习”，第Ⅵ部分“通信、感知与行动”，第Ⅶ部分“结论”。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》既详细介绍了人工智能的基本概念、思想和算法，还描述了其各个研究方向最前沿的进展，同时收集整理了详实的历史文献与事件。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》适合于不同层次和领域的研究人员及学生，是高等院校本科生和研究生人工智能课的首选教材，也是相关领域的科研与工程技术人员的重要参考书。</p>
-                    <p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》是最权威、最经典的人工智能教材，已被全世界100多个国家的1200多所大学用作教材。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》的最新版全面而系统地介绍了人工智能的理论和实践，阐述了人工智能领域的核心内容，并深入介绍了各个主要的研究方向。全书分为七大部分：第Ⅰ部分“人工智能”，第Ⅱ部分“问题求解”，第Ⅲ部分“知识、推理与规划”，第Ⅳ部分“不确定知识与推理”，第Ⅴ部分“学习”，第Ⅵ部分“通信、感知与行动”，第Ⅶ部分“结论”。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》既详细介绍了人工智能的基本概念、思想和算法，还描述了其各个研究方向最前沿的进展，同时收集整理了详实的历史文献与事件。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》适合于不同层次和领域的研究人员及学生，是高等院校本科生和研究生人工智能课的首选教材，也是相关领域的科研与工程技术人员的重要参考书。</p>
-                    <p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》是最权威、最经典的人工智能教材，已被全世界100多个国家的1200多所大学用作教材。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》的最新版全面而系统地介绍了人工智能的理论和实践，阐述了人工智能领域的核心内容，并深入介绍了各个主要的研究方向。全书分为七大部分：第Ⅰ部分“人工智能”，第Ⅱ部分“问题求解”，第Ⅲ部分“知识、推理与规划”，第Ⅳ部分“不确定知识与推理”，第Ⅴ部分“学习”，第Ⅵ部分“通信、感知与行动”，第Ⅶ部分“结论”。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》既详细介绍了人工智能的基本概念、思想和算法，还描述了其各个研究方向最前沿的进展，同时收集整理了详实的历史文献与事件。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》适合于不同层次和领域的研究人员及学生，是高等院校本科生和研究生人工智能课的首选教材，也是相关领域的科研与工程技术人员的重要参考书。</p>
-                    <p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》是最权威、最经典的人工智能教材，已被全世界100多个国家的1200多所大学用作教材。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》的最新版全面而系统地介绍了人工智能的理论和实践，阐述了人工智能领域的核心内容，并深入介绍了各个主要的研究方向。全书分为七大部分：第Ⅰ部分“人工智能”，第Ⅱ部分“问题求解”，第Ⅲ部分“知识、推理与规划”，第Ⅳ部分“不确定知识与推理”，第Ⅴ部分“学习”，第Ⅵ部分“通信、感知与行动”，第Ⅶ部分“结论”。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》既详细介绍了人工智能的基本概念、思想和算法，还描述了其各个研究方向最前沿的进展，同时收集整理了详实的历史文献与事件。《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》适合于不同层次和领域的研究人员及学生，是高等院校本科生和研究生人工智能课的首选教材，也是相关领域的科研与工程技术人员的重要参考书。</p>
-                    <p>111111111111111</p>
+                <div class="content-padded red-member-center">
+                    <div class="prj-user-info prj-interval-row">
+                        <div class="pic">
+                            <img src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i3/913126116/TB2Dp_vcfTJXuFjSspeXXapipXa_!!913126116.jpg_250x250" alt="">
+                            <div class="icon woman"></div>
+                        </div>
+                        <div class="info">
+                            <div class="name">大傻二傻</div>
+                            <div class="sub">模特儿</div>
+                            <div class="footer">
+                                <div class="ft-tag">角色 : 红人</div>
+                            </div>
+                        </div>
+                        <div class="operation">
+                            <div class="inner">
+                                <div class="icon"></div>
+                                <div class="text">全能比13</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prj-title prj-title-active">
+                        <a href="javascript:;" class="inner">
+                            <div class="content">我的推广进度</div>
+                            <div class="footer">查看全部</div>
+                        </a>
+                    </div>
+                    <div class="prj-flow prj-interval-row">
+                        <div class="item">
+                            <div class="icon">
+                                <div class="mark">99</div>
+                            </div>
+                            <div class="text">等待审核</div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <div class="mark">99</div>
+                            </div>
+                            <div class="text">等待审核</div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <div class="mark">99</div>
+                            </div>
+                            <div class="text">等待审核</div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <div class="mark">99</div>
+                            </div>
+                            <div class="text">等待审核</div>
+                        </div>
+                    </div>
+                    <div class="weui-cells prj-cells prj-interval-row">
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>我的推广服务</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>已卖出的服务</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cells prj-cells prj-interval-row">
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>我的PC直播间</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>我的助理</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>我的相册</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>我的收货地址</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cells prj-cells prj-interval-row">
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>完善资料</p>
+                            </div>
+                            <div class="weui-cell__ft">个人信息不完整影响排名，请补全
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cells prj-cells prj-interval-row">
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__bd">
+                                <p>联系我们</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- 上拉加载提示文字 -->
                 <div class="weui-loadmore">
@@ -538,112 +678,36 @@
                 </div>
             </div>
         </div>
+        <!-- 导航菜单 -->
         <div class="weui-tabbar">
             <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
-                <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
                 <div class="weui-tabbar__icon">
-                    <img src="./images/icon_nav_button.png" alt="">
+                    <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+                    <img src="./img/icon_nav_button.png" alt="">
                 </div>
                 <p class="weui-tabbar__label">微信</p>
             </a>
             <a href="#tab2" class="weui-tabbar__item">
                 <div class="weui-tabbar__icon">
-                    <img src="./images/icon_nav_msg.png" alt="">
+                    <img src="./img/icon_nav_msg.png" alt="">
                 </div>
                 <p class="weui-tabbar__label">通讯录</p>
             </a>
             <a href="#tab3" class="weui-tabbar__item">
                 <div class="weui-tabbar__icon">
-                    <img src="./images/icon_nav_article.png" alt="">
+                    <img src="./img/icon_nav_article.png" alt="">
                 </div>
                 <p class="weui-tabbar__label">发现</p>
             </a>
             <a href="#tab4" class="weui-tabbar__item">
                 <div class="weui-tabbar__icon">
-                    <img src="./images/icon_nav_cell.png" alt="">
+                    <img src="./img/icon_nav_cell.png" alt="">
                 </div>
                 <p class="weui-tabbar__label">我</p>
             </a>
         </div>
     </div>
-    <script data-main="plugins/config" src="plugins/require.js"></script>
-    <script src="plugins/JQWeui/jquery-2.1.4.js"></script>
-    <script src="plugins/JQWeui/fastclick.js"></script>
-    <script>
-    $(function() {
-        FastClick.attach(document.body);
-    });
-    </script>
-    <script src="plugins/JQWeui/jquery-weui.js"></script>
-    <script>
-    // 下拉刷新
-    $("#tab1").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(1);
-            $("#tab1 .content-padded").append('<h1>页面一</h1>');
-            $("#tab1").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab2").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(2);
-            $("#tab2 .content-padded").append('<h1>页面二</h1>');
-            $("#tab2").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab3").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(3);
-            $("#tab3 .content-padded").append('<h1>页面三</h1>');
-            $("#tab3").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab4").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(4);
-            $("#tab4 .content-padded").append('<h1>页面四</h1>');
-            $("#tab4").pullToRefreshDone();
-        }, 2000);
-    });
-
-    // 上拉加载
-    var loading_1 = false,
-        loading_2 = false,
-        loading_3 = false,
-        loading_4 = false;
-    $("#tab1").infinite().on("infinite", function() {
-        if (loading_1) return;
-        loading_1 = true;
-        setTimeout(function() {
-            $("#tab1 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_1 = false;
-        }, 2000);
-    });
-    $("#tab2").infinite().on("infinite", function() {
-        if (loading_2) return;
-        loading_1 = true;
-        setTimeout(function() {
-            $("#tab2 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_2 = false;
-        }, 2000);
-    });
-    $("#tab3").infinite().on("infinite", function() {
-        if (loading_3) return;
-        loading_3 = true;
-        setTimeout(function() {
-            $("#tab3 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_3 = false;
-        }, 2000);
-    });
-    $("#tab4").infinite().on("infinite", function() {
-        if (loading_4) return;
-        loading_4 = true;
-        setTimeout(function() {
-            $("#tab4 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_4 = false;
-        }, 2000);
-    });
-    </script>
+    <script data-main="js/config.js" src="js/require.js"></script>
 </body>
 
 </html>
