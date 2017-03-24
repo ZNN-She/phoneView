@@ -1,3 +1,4 @@
+//config配置
 require.config({
     baseUrl: "/js/app",
     paths: {
@@ -27,12 +28,12 @@ require.config({
 
 require(["jquery", "FastClick", "JQWeui", "snake"], function($, FastClick, JQWeui, snake) {
     FastClick.attach(document.body);
-    $(window).ready(function() {
-        var deviceWidth = document.documentElement.clientWidth;
-        console.log(deviceWidth);
-        if (deviceWidth > 750) deviceWidth = 750;
-        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
-    });
+    /*//计算html的font-size 写在这里会出现闪的情况 异步加载耗费时间
+    var deviceWidth = document.documentElement.clientWidth;
+    console.log(deviceWidth);
+    if (deviceWidth > 750) deviceWidth = 750;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';*/
+    //获取当前页面html的名字
     var urlParamObj = zSnake.urlParamToJson(window.location.href);
     var urlLastNode = window.location.href.split('/').pop();
     var htmlName = "index_weui"; //默认首页
@@ -41,10 +42,10 @@ require(["jquery", "FastClick", "JQWeui", "snake"], function($, FastClick, JQWeu
     } else {
         htmlName = urlLastNode.split("?").shift();
     }
-    htmlName = htmlName.split(".").shift();
-    // require 加载对应的模块
+    htmlName = htmlName.split(".").shift(); //当前html的名字
+    // require 加载html对应的js模块
     require([htmlName], function(htmlName) {
-        
+
     });
 
 });

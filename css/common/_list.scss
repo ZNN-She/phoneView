@@ -3,6 +3,10 @@
     width: 100%;
     box-sizing: border-box;
     background-color: #fff;
+    .pic {
+        background-image: url(../img/common/default-img.jpg);
+        background-size: 100%;
+    }
     //
     .prj-list-normal {
         padding-left: .24rem;

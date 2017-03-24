@@ -707,6 +707,14 @@
             </a>
         </div>
     </div>
+   <script>
+   //计算html的font-size 写在html里面 如果加载js会出现闪的情况
+   var deviceWidth = document.documentElement.clientWidth;
+   console.log(deviceWidth);
+   if (deviceWidth > 750) deviceWidth = 750;
+   document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+   </script> 
+    <!-- <script src="js/init.js"></script>  -->
     <script data-main="js/config.js" src="js/require.js"></script>
 </body>
 
