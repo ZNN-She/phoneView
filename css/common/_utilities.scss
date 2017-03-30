@@ -1,50 +1,144 @@
-.background-base{
-	background: $background;
-}
-.link-base{
-	color: $text-base;
-}
-
-.text-base{
-	color: $text-base;
-}
-.text-black{
-	color: $text-black;
-}
-.text-white{
-	color: $text-white;
-}
-.text-gery{
-	color: $text-grey;
-}
-.text-grey-hint{
-	color: $text-grey-hint;
-}
-.text-red{
-	color: $text-red;
-}
-.text-yellow{
-	color: $text-yellow;
-}
-.text-blue{
-	color: $text-blue;
-}
-.text-green{
-	color: $text-green;
+.clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
-.font-size-30{
-	font-size: .30rem;
+.overflow-hidden {
+    overflow: hidden;
 }
-.font-size-28, .font-size-title{
-	font-size: .28rem;
+
+.center {
+    text-align: center;
 }
-.font-size-24, .font-size-base{
-	font-size: .24rem;
+
+
+/* position */
+
+.position-abs {
+    position: absolute;
 }
-.font-size-22{
-	font-size: .22rem;
+
+.position-rel {
+    position: relative;
 }
-.font-size-20{
-	font-size: .20rem;
+
+.position-fix {
+    position: fixed;
+}
+
+
+/* display */
+
+.none {
+    display: none;
+}
+
+.black {
+    display: block;
+}
+
+.background-base {
+    background: $background !important;
+}
+.background-white {
+    background: #fff !important;
+}
+
+.link-base {
+    color: $text-base !important;
+}
+
+
+/* text color */
+
+.text-base {
+    color: $text-base !important;
+}
+
+.text-black {
+    color: $text-black !important;
+}
+
+.text-white {
+    color: $text-white !important;
+}
+
+.text-grey {
+    color: $text-grey !important;
+}
+
+.text-grey-hint {
+    color: $text-grey-hint !important;
+}
+
+.text-red {
+    color: $text-red !important;
+}
+
+.text-yellow {
+    color: $text-yellow !important;
+}
+
+.text-blue {
+    color: $text-blue !important;
+}
+
+.text-green {
+    color: $text-green !important;
+}
+
+
+/* font-size */
+
+.font-size-30 {
+    font-size: .30rem !important;
+}
+
+.font-size-28,
+.font-size-title {
+    font-size: .28rem !important;
+}
+
+.font-size-24,
+.font-size-base {
+    font-size: .24rem !important;
+}
+
+.font-size-22 {
+    font-size: .22rem !important;
+}
+
+.font-size-20 {
+    font-size: .20rem !important;
+}
+
+// through
+.text-decoration {
+    text-decoration: line-through;
+}
+
+
+/* border */
+
+.border-radius {
+    border-radius: 50%;
+}
+
+.border-0 {
+    border: 0 !important;
+    &:before {
+        border: 0 !important;
+    }
+}
+
+.border-top {
+    border-top: .01rem solid $border !important;
+}
+
+.border-bottom {
+    border-bottom: .01rem solid $border !important;
 }

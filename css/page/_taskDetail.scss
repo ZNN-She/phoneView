@@ -1,0 +1,33 @@
+.task-detail {
+    overflow-y: auto;
+    .task-info,
+    .task-info-detail,
+    .initiator-info,
+    .item-list {
+        background: #fff;
+    }
+    .task-info,
+    .task-text {
+        padding: .24rem;
+    }
+    .task-info-detail {
+        padding: .24rem;
+        .task-detail-item {
+            margin-bottom: .1rem;
+            display: flex;
+            .detail-item-content {
+                color: $text-grey;
+                flex: 1;
+            }
+        }
+    }
+    .sign-up-info {
+        padding-bottom: 1rem;
+    }
+    .list-vip-tag {
+        font-size: .22rem;
+        color: $text-red;
+        border: .01rem solid $border-red;
+        padding: 0 0.05rem;
+    }
+}

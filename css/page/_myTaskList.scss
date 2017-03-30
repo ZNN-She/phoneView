@@ -1,0 +1,17 @@
+.my-task-list{
+	.weui-tab__bd{
+		padding-top: 1rem;
+	}
+	.weui-tab__bd-item{
+		width: 100%;
+	}
+	.weui-pull-to-refresh{
+		// padding-top: .5rem;
+		// box-sizing:border-box;
+	}
+	.reminder{
+		padding: .2rem;
+		color: $text-grey-hint;
+		border-bottom: .01rem solid $border;
+	}
+}

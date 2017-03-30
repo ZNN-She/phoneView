@@ -1,4 +1,5 @@
- //weui
+ /* weui-cells */
+ 
  .prj-cells {
      margin-top: 0;
      font-size: .3rem;
@@ -39,8 +40,9 @@
          margin-top: -0.08rem;
      }
  }
+ /* end weui-cells */
+ /* search */
  
- //search
  .weui-search-bar {
      height: .88rem;
      padding: .08rem .1rem;
@@ -82,8 +84,162 @@
          color: $text-green;
      }
  }
-
- //weui-tabbar
- .weui-tabbar__icon{
-    position: relative;
+ /* end search */
+ /* weui-tabbar */
+ 
+ .weui-tabbar__icon {
+     position: relative;
  }
+ 
+ .weui-navbar {
+     display: flex;
+     height: 1rem;
+     background: #fff;
+     &:after {
+         border-bottom: 0;
+     }
+     .weui-navbar__item {
+         font-size: .3rem;
+         line-height: .74rem;
+         padding: .13rem 0;
+         color: $text-base;
+         background: #fff;
+         border-bottom: .01rem solid $border;
+         &:after {
+             border-right: 0;
+         }
+     }
+     .weui-navbar__item.weui-bar__item--on {
+         color: $text-red;
+         border-bottom: .06rem solid $border-red;
+     }
+ }
+ /* end weui-tabbar */
+ /* btn */
+ 
+ .weui-btn {
+     position: relative;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: .14rem;
+     padding-right: .14rem;
+     box-sizing: border-box;
+     font-size: .38rem;
+     text-align: center;
+     text-decoration: none;
+     color: #fff;
+     // line-height: .14rem;
+     border-radius: .05rem;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     overflow: hidden;
+     width: 80%;
+ }
+ 
+ .weui-btn_primary {
+     background-color: $btn-green;
+ }
+ 
+ .weui-btn_warn {
+     background-color: $btn-red;
+ }
+ 
+ .weui-btn_plain-primary {
+     color: $text-green;
+     border: .1rem solid $border-green;
+ }
+ 
+ .weui-btn_plain-default {
+     color: $text-grey;
+     border: .01rem solid $border;
+ }
+ 
+ .weui-btn + .weui-btn {
+     margin-top: 0;
+ }
+ /* end btn */
+ /* form */
+ 
+ .weui-vcode-btn {
+     font-size: .24rem;
+     color: $text-green;
+ }
+ 
+ .weui-input {
+     line-height: .8rem;
+     height: .8rem;
+ }
+ /* end form */
+ /* select */
+ 
+ .weui-picker-modal {
+     // height: 2.6rem;
+ }
+ 
+ .toolbar {
+     font-size: .36rem;
+     .toolbar-inner {
+         height: .66rem;
+     }
+     .picker-button {
+         height: .66rem;
+         line-height: .66rem;
+         padding: 0 0.15rem;
+     }
+     .title {
+         font-size: .36rem;
+         line-height: .66rem;
+     }
+ }
+ /* end select */
+ /* weui-picker */
+ 
+ .weui-picker-calendar {
+     height: 5.4rem;
+ }
+ 
+ .picker-calendar-month-picker,
+ .picker-calendar-year-picker {
+     line-height: .66rem;
+ }
+ 
+ .weui-picker-modal .picker-modal-inner {
+     height: 1.44rem;
+ }
+ 
+ .weui-picker-calendar .picker-modal-inner {
+     height: 5.6rem;
+ }
+ 
+ .picker-calendar-week-days {
+     height: .6rem;
+ }
+ 
+ .picker-calendar-week-days .picker-calendar-week-day {
+     line-height: .6rem;
+ }
+ 
+ .picker-calendar-week-days + .picker-calendar-months {
+     height: 1.58rem;
+ }
+ 
+ .picker-calendar-day {
+     font-size: .24rem;
+ }
+ 
+ i.icon.icon-next,
+ i.icon.icon-prev {
+     width: 0.35rem;
+     height: 0.35rem;
+ }
+ 
+ .picker-calendar-month-picker a.icon-only,
+ .picker-calendar-year-picker a.icon-only {
+     height: .66rem;
+     line-height: .66rem;
+ }
+ 
+ .picker-calendar-week-days + .picker-calendar-months {
+     height: 5rem;
+ }
+ /* end weui-picker */

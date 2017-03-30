@@ -13,3 +13,23 @@
 .prj-interval-row {
     margin-bottom: .2rem;
 }
+
+.GPS-icon {
+    display: inline-block;
+    width: .16rem;
+    height: .22rem;
+    vertical-align: middle;
+    margin: 0 .05rem;
+    background-image: url(../img/common/GPS-icon.png);
+    background-size: 100%;
+}
+
+.phone-icon {
+    display: inline-block;
+    width: .2rem;
+    height: .32rem;
+    vertical-align: text-bottom;
+    margin: 0 .05rem;
+    background-image: url(../img/common/phone-icon.png);
+    background-size: 100%;
+}

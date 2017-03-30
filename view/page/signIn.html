@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <!-- 网易-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/js/lib/JQWeui/weui.css">
+    <link rel="stylesheet" href="/js/lib/JQWeui/jquery-weui.css">
+    <link rel="stylesheet" href="/css/main_weui.css">
+    <title>会员注册</title>
+</head>
+
+<body class="sign-in-page" ontouchstart>
+    <div class="sign-in-top prj-interval-row">
+        <div class="sin-in-text">
+            <!-- 会员注册 -->
+            <img src="/img/common/LOGO.png" alt="">
+        </div>
+        <div class="sign-border-bottom">
+            <div class="border-bottom-item active"></div>
+            <div class="border-bottom-item"></div>
+            <div class="border-bottom-item"></div>
+        </div>
+    </div>
+    <div class="sign-in">
+        <div class="weui-cells weui-cells_form prj-cells prj-interval-row">
+            <div class="weui-cell weui-cell_vcode">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">手机号</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input id="sign-mobile" class="weui-input" type="text" placeholder="请输入手机号">
+                </div>
+                <div class="weui-cell__ft">
+                    <button class="weui-vcode-btn">获取验证码</button>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">验证码</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入验证码">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells weui-cells_checkbox prj-cells agreement">
+            <div class="weui-cell weui-check__label" for="s11">
+                <label class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </label>
+                <div class="weui-cell__bd">
+                    <p>我同意xxx协议</p>
+                </div>
+                <span class="weui-cell__ft text-green">查看协议</span>
+            </div>
+        </div>
+        <div id="sign-in" class="weui-btn weui-btn_primary" style="margin-top: 1rem;">注册</div>
+        <div class="weui-footer weui-footer_fixed-bottom position-abs">
+            <p class="weui-footer__links">
+                <a href="http://jqweui.com" class="weui-footer__link">全能掌柜提供技术支持</a>
+            </p>
+            <p class="weui-footer__text">www.qnzg.com.cn</p>
+        </div>
+    </div>
+    <div class="sign-in-success none">
+    	<div class="center">
+    		<img src="/img/sign-in-success.png" alt="">
+    		<p class="font-size-30">注册成功</p>
+    		<p class="text-grey">完成实名认证后才可展示在红人列表，并领取直播任务</p>
+    	</div>
+    	<div id="go-perfect-information" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: 1rem;">继续完善</div>
+    	<div id="back-home" class="weui-btn weui-btn_plain-default"">返回首页</div>
+    </div>
+    <div class="perfect-information none">
+    	<div class="head-icon">
+    		<img src="https://gw.alicdn.com/bao/uploaded/TB1IYqCQXXXXXXeXpXXSutbFXXX.jpg" alt="">
+    		<p>点击可修改头像</p>
+    	</div>
+    	<div class="weui-cells weui-cells_form prj-cells prj-interval-row">
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">昵称</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input id="sign-nick" class="weui-input" type="text" placeholder="请输入昵称">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">姓名</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入姓名">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">性别</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input id="sex" class="weui-input" type="text" placeholder="请输入性别">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">生日</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input id="birthday" class="weui-input" type="text" placeholder="请输入生日">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">职业</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入职业">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class="weui-label">所在城市</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入所在城市">
+                </div>
+            </div>
+        </div>
+        <div id="save-information" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: 1rem;">保存</div>
+    </div>
+    <script>
+    (function() {
+        //计算html的font-size 写在html里面 如果加载js会出现闪的情况
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth);
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    })();
+    </script>
+    <script data-main="/js/config.js" src="/js/require.js"></script>
+</body>
+
+</html>

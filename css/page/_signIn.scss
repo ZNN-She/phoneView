@@ -1,0 +1,47 @@
+.sign-in-page{
+	overflow-y: auto;
+	.sign-in-top{
+		background: #fff;
+		height: 2rem;
+		.sin-in-text{
+			font-size: .38rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+		.sign-border-bottom{
+			display: flex;
+			margin-right: -0.1rem;
+			.border-bottom-item{
+				flex:1;
+				height: .1rem;
+				background: $grey-light;
+				margin-right: .1rem;
+				&.active{
+					background: $background-red;
+				}
+			}
+		}
+	}
+	.sing-in-success , .perfect-information{
+		overflow-y:auto;
+	}
+	.head-icon{
+		height: 2rem;
+		text-align: center;
+		color: $text-grey-hint;
+		background-color: #fff;
+		border-bottom: .01rem solid $border;
+		padding-top: .5rem;
+		img{
+			display: inline-block;
+			width: .8rem;
+			height: .8rem;
+			border: .01rem solid $border;
+			border-radius: .05rem;
+			margin-bottom: .2rem;
+		}
+	}
+	.agreement{
+		background: $background;
+	}
+}

@@ -6,6 +6,7 @@
 @import "common/_reset";
 @import "common/_extendWeui";
 //common widget
+@import "common/_btn";
 @import "common/_list";
 @import "common/_search";
 @import "common/_info";
@@ -17,3 +18,6 @@
 
 // page
 @import "page/_index_weui";
+@import "page/_myTaskList";
+@import "page/_taskDetail";
+@import "page/_signIn";

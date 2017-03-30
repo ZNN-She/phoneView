@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <!-- 网易-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/js/lib/JQWeui/weui.css">
+    <link rel="stylesheet" href="/js/lib/JQWeui/jquery-weui.css">
+    <link rel="stylesheet" href="/css/main_weui.css">
+    <title>会员中心</title>
+</head>
+
+<body class="my-task-list">
+    <div class="weui-tab">
+        <div class="weui-navbar">
+            <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+	          待审核
+	        </a>
+            <a class="weui-navbar__item" href="#tab2">
+	          待推广
+	        </a>
+            <a class="weui-navbar__item" href="#tab3">
+	          待验证
+	        </a>
+            <a class="weui-navbar__item" href="#tab4">
+	          已结束
+	        </a>
+            <a class="weui-navbar__item" href="#tab5">
+	          已失效
+	        </a>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh">
+                <!--刷新提示文字  -->
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="reminder">
+                        <p>1.如期推广完成后，请上传可证明推广效果的截图；</p>
+                        <p>2.推广到期后3天内未上传凭证，任务将变为失败无法获得奖励</p>
+                    </div>
+                    <div class="prj-list">
+                        <div class="prj-list-panel">
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <!-- <div class="img">
+                                        <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                    </div> -->
+                                        <div class="content">
+                                            <span class="text">任务名称</span>
+                                        </div>
+                                        <div class="footer text-red">带发起人审核</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic border-radius">
+                                                <img class="border-radius" src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">大傻</div>
+                                                <div class="content-bd">
+                                                    <div class="text-grey">平面模特</div>
+                                                    <div class="ft"></div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd">
+                                                        <div class="GPS-icon"></div>杭州</div>
+                                                    <div class="bd"></div>
+                                                    <div class="ft">粉丝600W</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">查看红人</div>
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn">审核拒绝</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img class="border-radius" src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic border-radius">
+                                                <img class="border-radius" src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">大傻</div>
+                                                <div class="content-bd">
+                                                    <div class="text-grey">平面模特</div>
+                                                    <div class="ft"></div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd">
+                                                        <div class="GPS-icon"></div>杭州</div>
+                                                    <div class="bd"></div>
+                                                    <div class="ft">粉丝600W</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img class="border-radius" src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic border-radius">
+                                                <img class="border-radius" src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">大傻</div>
+                                                <div class="content-bd">
+                                                    <div class="text-grey">平面模特</div>
+                                                    <div class="ft"></div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd">
+                                                        <div class="GPS-icon"></div>杭州</div>
+                                                    <div class="bd"></div>
+                                                    <div class="ft">粉丝600W</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">查看红人</div>
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn">审核拒绝</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 回顶部按钮 -->
+                <span id="goBackTop" class="go-back-top"></span>
+                <!-- 上拉加载提示文字 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+                <!--刷新提示文字  -->
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="reminder">
+                        <p>1.如期推广完成后，请上传可证明推广效果的截图；</p>
+                        <p>2.推广到期后3天内未上传凭证，任务将变为失败无法获得奖励</p>
+                    </div>
+                    <div class="prj-list">
+                        <div class="prj-list-panel">
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 上拉加载提示文字 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+                <!--刷新提示文字  -->
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="reminder">
+                        <p>1.如期推广完成后，请上传可证明推广效果的截图；</p>
+                        <p>2.推广到期后3天内未上传凭证，任务将变为失败无法获得奖励</p>
+                    </div>
+                    <div class="prj-list">
+                        <div class="prj-list-panel">
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 上拉加载提示文字 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab4" class="weui-tab__bd-item">
+                <!--刷新提示文字  -->
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="reminder">
+                        <p>1.如期推广完成后，请上传可证明推广效果的截图；</p>
+                        <p>2.推广到期后3天内未上传凭证，任务将变为失败无法获得奖励</p>
+                    </div>
+                    <div class="prj-list">
+                        <div class="prj-list-panel">
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 上拉加载提示文字 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab5" class="weui-tab__bd-item">
+                <!--刷新提示文字  -->
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="reminder">
+                        <p>1.如期推广完成后，请上传可证明推广效果的截图；</p>
+                        <p>2.推广到期后3天内未上传凭证，任务将变为失败无法获得奖励</p>
+                    </div>
+                    <div class="prj-list">
+                        <div class="prj-list-panel">
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                            <div class="list-panel-item">
+                                <div class="list-panel-title">
+                                    <div class="inner">
+                                        <div class="img">
+                                            <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <span class="text">往往昵称</span>
+                                        </div>
+                                        <div class="footer text-red">带推广人推广</div>
+                                    </div>
+                                </div>
+                                <div class="list-panel-content">
+                                    <div class="panel-content-bd">
+                                        <div class="list-normal-item">
+                                            <div class="pic">
+                                                <img src="https://gd3.alicdn.com/imgextra/i3/751367517/TB2p7slXZ2DjeFjSspnXXb20XXa_!!751367517.jpg_400x400.jpg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                                <div class="content-bd">
+                                                    <div><small>￥</small>1000/人</div>
+                                                    <div class="ft">已报名12人</div>
+                                                </div>
+                                                <div class="content-ft">
+                                                    <div class="hd"><span class="tag-blue">直播推广</span></div>
+                                                    <div class="bd">dsafasd</div>
+                                                    <div class="ft">
+                                                        招募以结束
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content-ft">
+                                        <div class="phone-icon"></div>
+                                        <span class="text">发起人 15823838293</span>
+                                    </div>
+                                </div>
+                                <div class="list-panel-footer">
+                                    <div class="prj-btn">推广详情</div>
+                                    <div class="prj-btn btn-plain-red">提交验收</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 上拉加载提示文字 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        //计算html的font-size 写在html里面 如果加载js会出现闪的情况
+        var deviceWidth = document.documentElement.clientWidth;
+        console.log(deviceWidth);
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    })();
+    </script>
+    <script data-main="/js/config.js" src="/js/require.js"></script>
+</body>
+
+</html>
