@@ -12,8 +12,8 @@
     #tab3 {
         margin-top: -50px;
     }
-    #tab4{
-        .content-padded{
+    #tab4 {
+        .content-padded {
             padding-bottom: 50px;
         }
         margin-top: -50px;
@@ -23,18 +23,46 @@
         // background: $background;
         min-height: 100%
     }
-
     .content-padded.contact-user {
-            overflow: auto;
-            .title-top {
-                font-size: .35rem;
+        overflow: auto;
+        .title-top {
+            font-size: .35rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+        .contact {
+            font-size: .3rem;
+            background: #fff;
+            padding: .1rem .24rem;
+        }
+    }
+    // 
+    #my-pc-room-page {
+        >div {
+            padding: .24rem;
+        }
+        .room-top >div {
+            display: inline-block;
+            height: 3rem;
+            width: 40%;
+            line-height: 2.7rem;
+            background-image: url(/img/common/computer-icon.png);
+            background-size: contain;
+        }
+    }
+    // 
+    #my-integral-page {
+        .integral-info {
+            padding: .24rem;
+            .integral-info-bd {
                 height: 2rem;
-                line-height: 2rem;
+                padding: .5rem;
+                box-sizing:border-box;
             }
-            .contact {
-                font-size: .3rem;
-                background: #fff;
-                padding: .1rem .24rem;
+            .integral-info-ft {
+                display: flex;
+                justify-content: space-between;
             }
         }
+    }
 }

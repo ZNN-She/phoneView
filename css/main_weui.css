@@ -204,6 +204,9 @@ a {
     color: #222222; }
 
 /* weui-cells */
+* {
+  -webkit-overflow-scrolling: touch; }
+
 .prj-cells {
   margin-top: 0;
   font-size: .3rem;
@@ -1099,6 +1102,24 @@ i.icon.icon-prev {
       font-size: .3rem;
       background: #fff;
       padding: .1rem .24rem; }
+  .index-weui-page #my-pc-room-page > div {
+    padding: .24rem; }
+  .index-weui-page #my-pc-room-page .room-top > div {
+    display: inline-block;
+    height: 3rem;
+    width: 40%;
+    line-height: 2.7rem;
+    background-image: url(/img/common/computer-icon.png);
+    background-size: contain; }
+  .index-weui-page #my-integral-page .integral-info {
+    padding: .24rem; }
+    .index-weui-page #my-integral-page .integral-info .integral-info-bd {
+      height: 2rem;
+      padding: .5rem;
+      box-sizing: border-box; }
+    .index-weui-page #my-integral-page .integral-info .integral-info-ft {
+      display: flex;
+      justify-content: space-between; }
 
 .my-task-list .weui-tab__bd {
   padding-top: 1rem; }

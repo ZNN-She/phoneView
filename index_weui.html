@@ -41,7 +41,7 @@
 </head>
 
 <body class="index-weui-page" ontouchstart>
-    <div id="index-weui-page" class="weui-tab main-page">
+    <div id="index-weui-page" class="weui-tab main-page prj-view">
         <div class="weui-tab__bd">
             <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh">
                 <!--刷新提示文字  -->
@@ -74,6 +74,71 @@
                     </div>
                     <div class="prj-list">
                         <div class="prj-list-picture">
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-picture-item">
+                                <div class="pic">
+                                    <img src="img/test-1.jpg" alt="">
+                                </div>
+                                <div class="shade"></div>
+                                <div class="text">
+                                    <div class="text-hd">名字名字</div>
+                                    <div class="text-bd">
+                                        <div>模特</div>
+                                        <div>600</div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="list-picture-item">
                                 <div class="pic">
                                     <img src="img/test-1.jpg" alt="">
@@ -185,8 +250,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 回顶部按钮 -->
-                    <span id="goBackTop-tab1" class="go-back-top"></span>
                 </div>
                 <!-- 上拉加载提示文字 -->
                 <div class="weui-loadmore">
@@ -364,14 +427,14 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- 回顶部按钮 -->
-                    <span id="goBackTop-tab2" class="go-back-top"></span>
                 </div>
                 <!-- 上拉加载提示文字 -->
                 <div class="weui-loadmore">
                     <i class="weui-loading"></i>
                     <span class="weui-loadmore__tips">正在加载</span>
                 </div>
+                <!-- 回顶部按钮
+                <span id="goBackTop-tab2" class="go-back-top"></span> -->
             </div>
             <div id="tab3" class="weui-tab__bd-item weui-pull-to-refresh">
                 <div class="content-padded contact-user">
@@ -406,7 +469,7 @@
                                 <div class="ft-tag">角色 : 红人</div>
                             </div>
                         </div>
-                        <div class="operation">
+                        <div id="my-integral" class="operation">
                             <div class="inner">
                                 <div class="icon"></div>
                                 <div class="text">全能比13</div>
@@ -462,7 +525,7 @@
                         </div>
                     </div>
                     <div class="weui-cells prj-cells prj-interval-row">
-                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                        <div id="my-pc-room" class="weui-cell weui-cell_access">
                             <div class="weui-cell__bd">
                                 <p>我的PC直播间</p>
                             </div>
@@ -512,6 +575,8 @@
                 </div>
             </div>
         </div>
+        <!-- 回顶部按钮 -->
+        <span id="goBackTop-tab1" class="go-back-top"></span>
         <!-- 导航菜单 -->
         <div class="weui-tabbar">
             <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
@@ -541,7 +606,7 @@
             </a>
         </div>
         <!-- 右侧弹框 -->
-        <div id="prj-filtrate-block" class="prj-filtrate-block">
+        <div id="prj-filtrate-block" class="prj-filtrate-block prj-view">
             <div class="filtrate-content">
                 <div class="content-panel">
                     <div class="content-panel-hd">性别</div>
@@ -582,9 +647,10 @@
             </div>
         </div>
         <!-- 浮层 -->
-        <div id="prj-cover-floor" class="prj-cover-floor"></div>
+        <div id="prj-cover-floor" class="prj-cover-floor prj-view"></div>
     </div>
-    <div id="contact-us-page" class="none">
+    <!-- 联系我们 -->
+    <div id="contact-us-page" class="none prj-view">
         <div class="content-padded contact-user">
             <div class="contact title-top center prj-interval-row">
                 推广招商暂仅定向开放，如有需求请联系我们
@@ -602,6 +668,88 @@
                 <p>QQ 123213124</p>
             </div>
         </div>
+    </div>
+    <!-- 我的PC直播间 -->
+    <div id="my-pc-room-page" class="none prj-view">
+        <div class="room-top center background-white">
+            <div>
+                <img src="" alt="">
+                <p>PC直播间</p>
+            </div>
+        </div>
+        <div class="prj-interval-row background-white text-grey-hint">
+            <p>淘客返利监控：实时监控返利比率变动，防止发起人中途修改返利比例；</p>
+            <p>专享页口令设置：自定义专享价互动页面口令实现粉丝的真正专享价，并跟踪粉丝动态；</p>
+            <p>粉丝营销：可对推广过程中积累的粉丝进行管理与营销；</p>
+            <p>我的推广排期：可直观获取并显示我的所有推广排期</p>
+        </div>
+        <div class="background-white">
+            <div>我的PC直播间地址</div>
+            <div class="center">
+                <p>http://xxxxxx.com/XXXX.html</p>
+                <p>请记住此链接并其复制到PC网页中打开</p>
+                <p>账号：{你的手机号}</p>
+                <p>密码：{随机码}</p>
+            </div>
+        </div>
+        <div class="weui-footer weui-footer_fixed-bottom">
+            <p class="weui-footer__links">
+                <a href="http://jqweui.com" class="weui-footer__link">全能掌柜提供技术支持</a>
+            </p>
+            <p class="weui-footer__text">www.qnzg.com.cn</p>
+        </div>
+    </div>
+    <!-- 我的全能币 -->
+    <div id="my-integral-page" class="none prj-view">
+        <div class="integral-info prj-interval-row background-white">
+            <div class="integral-info-hd">全能币结余</div>
+            <div class="integral-info-bd center">
+                <p class="font-size-30 text-red">10000</p>
+                <p class="text-grey-hint">约合人民币10000.00元</p>
+            </div>
+            <div class="integral-info-ft">
+                <div><span class="text-grey-hint">当前冻结：</span>200</div>
+                <div><span class="text-grey-hint">提现中：</span>200</div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div id="withdraw-cash-btn" class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>提现</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>充值</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>交易明细</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>支付密码设置</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全能币提现 -->
+    <div id="withdraw-cash-page" class="none prj-view">
+        提现
     </div>
     <script>
     (function() {

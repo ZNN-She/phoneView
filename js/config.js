@@ -38,11 +38,6 @@ require.config(REQUIRY_CONFIG);
 
 require(["require", "jquery", "FastClick", "JQWeui", "snake", "module"], function(require, $, FastClick, JQWeui, snake, module) {
     FastClick.attach(document.body);
-    /*//计算html的font-size 写在这里会出现闪的情况 异步加载耗费时间
-    var deviceWidth = document.documentElement.clientWidth;
-    console.log(deviceWidth);
-    if (deviceWidth > 750) deviceWidth = 750;
-    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';*/
     //获取当前页面html的名字
     var urlParamObj = zSnake.urlParamToJson(window.location.href);
     var urlLastNode = window.location.href.split('/').pop();
@@ -70,22 +65,12 @@ require(["require", "jquery", "FastClick", "JQWeui", "snake", "module"], functio
  ** 监听历史记录来响应手机物理返回键
  */
 window.addEventListener("popstate", function(e) {
-    /*
-     ** 整屏浮层 
-     ** 通过sessionStorage.prjCoverFloor判断 true是有浮层
-     ** sessionStorage 页面存储 关闭页面会被清空
-     */
-    if (String(sessionStorage.prjCoverFloor) == "true") {
-        $("#prj-cover-floor").removeClass("active"); //隐藏浮层
-        $("#prj-filtrate-block").removeClass("active").addClass("none"); //右侧弹框
-        sessionStorage.prjCoverFloor = false; //更新sessionStorage
+    for(var sessionStorageItem in sessionStorage){
+        console.log(sessionStorageItem + "=" +sessionStorage[sessionStorageItem]);
     }
-    /*
-     * 联系我们
-     */
-     if (String(sessionStorage.contactUsPage) == "true") {
-        sessionStorage.contactUsPage = false; //更新sessionStorage
-        $("#contact-us-page").addClass('none');
-        $("#index-weui-page").removeClass('none');
+    if(sessionStorage.prjSessionArry){
+        $(".prj-view").addClass('none');
+        $("#" + sessionStorage.prjSessionArry.pop()).removeClass('none');
     }
+    
 }, false);
