@@ -109,6 +109,7 @@ define(["jquery"], function($) {
 
     window.addEventListener("popstate", function(e) {
         leave();
+        console.log(123);
     }, false);
     return {
         rootRoute: rootRoute,

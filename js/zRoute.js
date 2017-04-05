@@ -10,8 +10,7 @@ var phoneBack = function(operation,id) {
 
     function addHistory() {
         var htmlName = getHtmlName();
-        var hisName =  htmlName + new Date().getTime();
-        history.pushState({ htmlName: hisName }, "");
+        history.pushState({ htmlName: htmlName }, "");
     }
 
     function storeSessionStorage() {
@@ -56,6 +55,7 @@ var phoneBack = function(operation,id) {
 
     window.addEventListener("popstate", function(e) {
         back();
+        console.log(123);
     }, false);
 
     return {

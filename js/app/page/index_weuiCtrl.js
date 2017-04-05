@@ -54,7 +54,7 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
         $("#index-weui-page").removeClass('none');
     });*/
 
-    //
+    /*//
     $("#prj-filtrate-open-icon").on("click", function() {
         $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
         $("#prj-filtrate-block").removeClass("none").addClass("active");
@@ -63,6 +63,18 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#prj-filtrate-block").removeClass("active").addClass("none");
             $("#prj-cover-floor").removeClass("active").addClass("none");
         });
+        zroute.addRoute({
+            id: "123",
+            enterFn: function() {
+                $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
+                $("#prj-filtrate-block").removeClass("none").addClass("active");
+            },
+            leaveFn: function() {
+                $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
+                $("#prj-filtrate-block").removeClass("active").addClass("none");
+                $("#prj-cover-floor").removeClass("active").addClass("none");
+            }
+        })
     });
     //点击浮层隐藏右弹框
     $("#prj-cover-floor").on("click", function() {
@@ -86,7 +98,7 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#my-pc-room-page").addClass('none');
             $("#index-weui-page").removeClass('none');
         });
-    });
+    });*/
     //我的全能币
     $("#my-integral").on("click", function() {
         $("#my-integral-page").removeClass('none');
@@ -95,6 +107,17 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#my-integral-page").addClass('none');
             $("#index-weui-page").removeClass('none');
         });
+        /*zroute.addRoute({
+            id: "123",
+            enterFn: function() {
+                $("#my-integral-page").removeClass('none');
+                $("#index-weui-page").addClass('none');
+            },
+            leaveFn: function() {
+                $("#my-integral-page").addClass('none');
+                $("#index-weui-page").removeClass('none');
+            }
+        })*/
     });
     //全能币提现
     $("#withdraw-cash-btn").on("click", function() {
@@ -104,5 +127,16 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#withdraw-cash-page").addClass('none');
             $("#my-integral-page").removeClass('none');
         });
+        /*zroute.addRoute({
+            id: "123",
+            enterFn: function() {
+                $("#withdraw-cash-page").removeClass('none');
+                $("#my-integral-page").addClass('none');
+            },
+            leaveFn: function() {
+                $("#withdraw-cash-page").addClass('none');
+                $("#my-integral-page").removeClass('none');
+            }
+        })*/
     });
 })
