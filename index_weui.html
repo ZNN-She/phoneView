@@ -41,7 +41,7 @@
 </head>
 
 <body class="index-weui-page" ontouchstart>
-    <div id="index-weui-page" class="weui-tab main-page prj-view">
+    <div id="index-weui-page" class="weui-tab main-page">
         <div class="weui-tab__bd">
             <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh">
                 <!--刷新提示文字  -->
@@ -534,13 +534,6 @@
                         </div>
                         <div class="weui-cell weui-cell_access" href="javascript:;">
                             <div class="weui-cell__bd">
-                                <p>我的助理</p>
-                            </div>
-                            <div class="weui-cell__ft">
-                            </div>
-                        </div>
-                        <div class="weui-cell weui-cell_access" href="javascript:;">
-                            <div class="weui-cell__bd">
                                 <p>我的相册</p>
                             </div>
                             <div class="weui-cell__ft">
@@ -577,8 +570,10 @@
         </div>
         <!-- 回顶部按钮 -->
         <span id="goBackTop-tab1" class="go-back-top"></span>
+        <!-- 回顶部按钮 -->
+        <span id="goBackTop-tab2" class="go-back-top none"></span>
         <!-- 导航菜单 -->
-        <div class="weui-tabbar">
+        <div id="weui-tabbar" class="weui-tabbar">
             <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
                 <div class="weui-tabbar__icon">
                     <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
@@ -650,7 +645,7 @@
         <div id="prj-cover-floor" class="prj-cover-floor prj-view"></div>
     </div>
     <!-- 联系我们 -->
-    <div id="contact-us-page" class="none prj-view">
+    <div id="contact-us-page" class="none">
         <div class="content-padded contact-user">
             <div class="contact title-top center prj-interval-row">
                 推广招商暂仅定向开放，如有需求请联系我们
@@ -670,7 +665,7 @@
         </div>
     </div>
     <!-- 我的PC直播间 -->
-    <div id="my-pc-room-page" class="none prj-view">
+    <div id="my-pc-room-page" class="none">
         <div class="room-top center background-white">
             <div>
                 <img src="" alt="">
@@ -694,62 +689,10 @@
         </div>
         <div class="weui-footer weui-footer_fixed-bottom">
             <p class="weui-footer__links">
-                <a href="http://jqweui.com" class="weui-footer__link">全能掌柜提供技术支持</a>
+                <a href="javascript:void(0)" class="weui-footer__link">全能掌柜提供技术支持</a>
             </p>
             <p class="weui-footer__text">www.qnzg.com.cn</p>
         </div>
-    </div>
-    <!-- 我的全能币 -->
-    <div id="my-integral-page" class="none prj-view">
-        <div class="integral-info prj-interval-row background-white">
-            <div class="integral-info-hd">全能币结余</div>
-            <div class="integral-info-bd center">
-                <p class="font-size-30 text-red">10000</p>
-                <p class="text-grey-hint">约合人民币10000.00元</p>
-            </div>
-            <div class="integral-info-ft">
-                <div><span class="text-grey-hint">当前冻结：</span>200</div>
-                <div><span class="text-grey-hint">提现中：</span>200</div>
-            </div>
-        </div>
-        <div class="weui-cells prj-cells prj-interval-row">
-            <div id="withdraw-cash-btn" class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__bd">
-                    <p>提现</p>
-                </div>
-                <div class="weui-cell__ft">
-                </div>
-            </div>
-            <div class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__bd">
-                    <p>充值</p>
-                </div>
-                <div class="weui-cell__ft">
-                </div>
-            </div>
-        </div>
-        <div class="weui-cells prj-cells prj-interval-row">
-            <div class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__bd">
-                    <p>交易明细</p>
-                </div>
-                <div class="weui-cell__ft">
-                </div>
-            </div>
-        </div>
-        <div class="weui-cells prj-cells prj-interval-row">
-            <div class="weui-cell weui-cell_access" href="javascript:;">
-                <div class="weui-cell__bd">
-                    <p>支付密码设置</p>
-                </div>
-                <div class="weui-cell__ft">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 全能币提现 -->
-    <div id="withdraw-cash-page" class="none prj-view">
-        提现
     </div>
     <script>
     (function() {

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <!-- 网易-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/js/lib/JQWeui/weui.css">
+    <link rel="stylesheet" href="/js/lib/JQWeui/jquery-weui.css">
+    <link rel="stylesheet" href="/css/main_weui.css">
+    <title>我的全能币</title>
+</head>
+
+<body class="my-integral-page" ontouchstart>
+    <!-- 我的全能币 -->
+    <div id="my-integral-page" class="">
+        <div class="integral-info prj-interval-row background-white">
+            <div class="integral-info-hd">全能币结余</div>
+            <div class="integral-info-bd center">
+                <p class="font-size-30 text-red">10000</p>
+                <p class="text-grey-hint">约合人民币10000.00元</p>
+            </div>
+            <div class="integral-info-ft">
+                <div><span class="text-grey-hint">当前冻结：</span>200</div>
+                <div><span class="text-grey-hint">提现中：</span>200</div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div id="withdraw-cash-btn" class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>提现</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+            <div id="recharge-btn" class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>充值</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div id="integral-bill-btn" class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>交易明细</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div id="password-setting" class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>支付密码设置</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全能币提现 -->
+    <div id="withdraw-cash-page" class="none">
+        <div class="weui-cells prj-cells prj-interval-row">
+            <div id="withdraw-cash-btn" class="weui-cell" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>可提现</p>
+                </div>
+                <div class="weui-cell__ft text-red font-size-30">
+                    ￥800.00
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>提现至</p>
+                </div>
+                <div class="weui-cell__ft">
+                    支付宝
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>支付宝账号</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access" href="javascript:;">
+                <div class="weui-cell__bd">
+                    <p>支付宝实名认证姓名</p>
+                </div>
+                <div class="weui-cell__ft">
+                </div>
+            </div>
+        </div>
+        <div id="withdraw-cash" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: 1rem;">
+            提交提现申请
+        </div>
+    </div>
+    <!-- 输入密码 -->
+    <div id="withdraw-password-page" class="none">
+        <p class="">输入支付密码</p>
+        <div class="center">
+            <input type="password">
+        </div>
+        <div id="withdraw-cash-confirm" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: .5rem;">
+            确认
+        </div>
+    </div>
+    <!-- 设置密码 -->
+    <div id="setting-password-page" class="none">
+        <div id="setting-password-one">
+            <p class="">请设置支付密码</p>
+            <div class="center">
+                <input id="setting-password-one-input" type="password">
+            </div>
+            <div id="setting-password-one-btn" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: .5rem;">
+                确认
+            </div>
+        </div>
+        <div id="setting-password-two" class="none">
+            <p class="">请在输入一次</p>
+            <div class="center">
+                <input id="setting-password-two-input" type="password">
+            </div>
+            <div id="setting-password-two-btn" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: .5rem;">
+                确认
+            </div>
+        </div>
+    </div>
+    <!-- 重置密码 -->
+    <div id="modify-password-page" class="none">
+        <div id="setting-password-one">
+            <p class="">请设置支付密码</p>
+            <div class="center">
+                <input id="setting-password-one-input" type="password">
+            </div>
+            <div id="setting-password-one-btn" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: .5rem;">
+                确认
+            </div>
+        </div>
+        <div id="setting-password-two" class="none">
+            <p class="">请在输入一次</p>
+            <div class="center">
+                <input id="setting-password-two-input" type="password">
+            </div>
+            <div id="setting-password-two-btn" class="weui-btn weui-btn_primary prj-interval-row" style="margin-top: .5rem;">
+                确认
+            </div>
+        </div>
+    </div>
+    <!-- 充值 -->
+    <div id="recharge-page" class="none">
+        充值
+    </div>
+    <!-- 交易明细 -->
+    <div id="integral-bill-page" class="weui-tab none">
+        <div class="weui-navbar">
+            <div class="weui-navbar__item weui-bar__item--on" href="#tab1">
+                全部
+            </div>
+            <div class="weui-navbar__item" href="#tab2">
+                获取明细
+            </div>
+            <div class="weui-navbar__item" href="#tab3">
+                消耗明细
+            </div>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh infinite">
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <div class="prj-list">
+                        <ul class="prj-list-normal">
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-red">
+                                    +2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">成功</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-normal-item">
+                                <div class="pic text text-geeen">
+                                    -2000
+                                </div>
+                                <div class="content">
+                                    <div class="content-hd">的沙发客爱的色放撒旦发多少</div>
+                                    <div class="content-bd">
+                                        <div></div>
+                                        <div class="ft"></div>
+                                    </div>
+                                    <div class="content-ft">
+                                        <div class="hd">2012-21-12 12:23:23</div>
+                                        <div class="ft">
+                                            <span class="text-red">失败</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item weui-pull-to-refresh infinite">
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <h1 class="doc-head">页面二</h1>
+                    <p>A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.</p>
+                    <p>A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.</p>
+                    <p>A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.</p>
+                    <p>A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.</p>
+                </div>
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item weui-pull-to-refresh infinite">
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">下拉刷新</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在刷新</div>
+                </div>
+                <div class="content-padded">
+                    <h1 class="doc-head">页面三</h1>
+                    <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+                    <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+                    <p>Lots of people use React as the V in MVC. Since React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.</p>
+                </div>
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        //计算html的font-size 写在html里面 如果加载js会出现闪的情况
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    })();
+    </script>
+    <script data-main="/js/config.js" src="/js/require.js"></script>
+</body>
+
+</html>

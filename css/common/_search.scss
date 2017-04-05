@@ -63,23 +63,23 @@
         box-sizing: border-box;
         .content-panel {
             .content-panel-hd {
-                font-size: .30rem;
-                line-height: .6rem;
-                height: .8rem;
+                font-size: 15px;
+                line-height: 30px;
+                height: 40px;
             }
             .content-panel-bd {
                 display: flex;
                 flex-wrap: wrap;
                 margin-right: -0.2rem;
                 .content-panel-item {
-                    width: 1rem;
-                    font-size: .24rem;
+                    width: 66px;
+                    font-size: 12px;
                     text-align: center;
                     background: $background-grey;
-                    padding: 0.04rem .2rem;
+                    padding: 4px 10px;
                     margin-right: .2rem;
                     margin-bottom: .2rem;
-                    flex: 1;
+                    // flex: 1;
                     border-radius: .1rem;
                     &.active {
                         color: #fff;
@@ -87,7 +87,7 @@
                     }
                     input {
                         width: 100%;
-                        line-height: .38rem;
+                        line-height: 19px;
                         display: block;
                         border: 0;
                     }

@@ -1,4 +1,4 @@
-define(["zroute", "goBackTop"], function(zroute, goBackTop) {
+define(["phoneback", "goBackTop"], function(phoneback, goBackTop) {
     /*$.prompt({
         title: '登陆',
         text: '请输入注册的昵称或手机号',
@@ -47,14 +47,19 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
     goBackTop.GoBackTop("goBackTop-tab1", "tab1");
     goBackTop.GoBackTop("goBackTop-tab2", "tab2");
 
+    $("#weui-tabbar").on("click", ".weui-tabbar__item", function(argument) {
+        $(".go-back-top").css({ "display": "none" });
+        switch ($(this).attr("href")) {
+            case "#tab1":
+                $("#goBackTop-tab1").css({ "display": "block" });
+                break;
+            case "#tab2":
+                $("#goBackTop-tab2").css({ "display": "block" });
+                break;
+        }
+    });
 
-    //
-    /*phoneBack(function() {
-        $(".prj-view").addClass('none');
-        $("#index-weui-page").removeClass('none');
-    });*/
-
-    /*//
+    //显示右侧弹框 
     $("#prj-filtrate-open-icon").on("click", function() {
         $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
         $("#prj-filtrate-block").removeClass("none").addClass("active");
@@ -63,18 +68,6 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#prj-filtrate-block").removeClass("active").addClass("none");
             $("#prj-cover-floor").removeClass("active").addClass("none");
         });
-        zroute.addRoute({
-            id: "123",
-            enterFn: function() {
-                $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
-                $("#prj-filtrate-block").removeClass("none").addClass("active");
-            },
-            leaveFn: function() {
-                $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
-                $("#prj-filtrate-block").removeClass("active").addClass("none");
-                $("#prj-cover-floor").removeClass("active").addClass("none");
-            }
-        })
     });
     //点击浮层隐藏右弹框
     $("#prj-cover-floor").on("click", function() {
@@ -98,45 +91,8 @@ define(["zroute", "goBackTop"], function(zroute, goBackTop) {
             $("#my-pc-room-page").addClass('none');
             $("#index-weui-page").removeClass('none');
         });
-    });*/
-    //我的全能币
-    $("#my-integral").on("click", function() {
-        $("#my-integral-page").removeClass('none');
-        $("#index-weui-page").addClass('none');
-        phoneBack(function() {
-            $("#my-integral-page").addClass('none');
-            $("#index-weui-page").removeClass('none');
-        });
-        /*zroute.addRoute({
-            id: "123",
-            enterFn: function() {
-                $("#my-integral-page").removeClass('none');
-                $("#index-weui-page").addClass('none');
-            },
-            leaveFn: function() {
-                $("#my-integral-page").addClass('none');
-                $("#index-weui-page").removeClass('none');
-            }
-        })*/
     });
-    //全能币提现
-    $("#withdraw-cash-btn").on("click", function() {
-        $("#withdraw-cash-page").removeClass('none');
-        $("#my-integral-page").addClass('none');
-        phoneBack(function() {
-            $("#withdraw-cash-page").addClass('none');
-            $("#my-integral-page").removeClass('none');
-        });
-        /*zroute.addRoute({
-            id: "123",
-            enterFn: function() {
-                $("#withdraw-cash-page").removeClass('none');
-                $("#my-integral-page").addClass('none');
-            },
-            leaveFn: function() {
-                $("#withdraw-cash-page").addClass('none');
-                $("#my-integral-page").removeClass('none');
-            }
-        })*/
+    $("#my-integral").on("click", function() {
+        window.location.href="view/page/myIntegral"
     });
 })

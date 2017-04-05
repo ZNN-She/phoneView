@@ -10,7 +10,7 @@ var REQUIRY_CONFIG = {
         "JQWeui": "../lib/JQWeui/jquery-weui",
         "zNetwork": "../lib/zNetwork",
         "snake": "../lib/zSnake",
-        "zroute": "../zRoute",
+        "phoneback": "../lib/phoneBack",
         /*
          * common
          */
@@ -20,6 +20,7 @@ var REQUIRY_CONFIG = {
          */
         "index_weui": "page/index_weuiCtrl",
         "myTaskList": "page/myTaskListCtrl",
+        "myIntegral": "page/myIntegralCtrl",
         "signIn": "page/signInCtrl",
         "test": "page/test"
     },
@@ -33,7 +34,7 @@ var REQUIRY_CONFIG = {
         "snake": {
             deps: ["jquery"]
         },
-        "zroute": {
+        "phoneback": {
             deps: ["snake"]
         },
         "test": {
@@ -43,8 +44,8 @@ var REQUIRY_CONFIG = {
 };
 require.config(REQUIRY_CONFIG);
 
-require(["require", "jquery", "FastClick", "JQWeui", "zroute", "snake", "module"],
-    function(require, $, FastClick, JQWeui, zroute, snake, module) {
+require(["require", "jquery", "FastClick", "JQWeui", "phoneback", "snake", "module"],
+    function(require, $, FastClick, JQWeui, phoneback, snake, module) {
         FastClick.attach(document.body);
         //获取当前页面html的名字
         var urlParamObj = zSnake.urlParamToJson(window.location.href);

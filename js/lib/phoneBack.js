@@ -1,19 +1,10 @@
-/*
- *  operation Function
- */
-var phoneBack = function(operation) {
-    init();
-    function init() {
-        addHistory();
-        storeSessionStorage();
-    }
-
+define(["jquery"], function($) {
     function addHistory() {
         var htmlName = getHtmlName();
         history.pushState({ htmlName: htmlName }, "");
     }
 
-    function storeSessionStorage() {
+    function storeSessionStorage(operation) {
         var zSnakeStack = [];
         if (String(sessionStorage.Z_SNAKE_STACK) == "undefined") {
             sessionStorage.Z_SNAKE_STACK = "[]";
@@ -57,8 +48,9 @@ var phoneBack = function(operation) {
         back();
         console.log(123);
     }, false);
-
-    return {
-
-    };
-};
+    window.phoneBack = function(operation) {
+        addHistory();
+        storeSessionStorage(operation);
+    }
+    return {}
+});
