@@ -1,4 +1,4 @@
-define(["goBackTop"], function(goBackTop) {
+define(["zroute", "goBackTop"], function(zroute, goBackTop) {
     /*$.prompt({
         title: '登陆',
         text: '请输入注册的昵称或手机号',
@@ -47,15 +47,22 @@ define(["goBackTop"], function(goBackTop) {
     goBackTop.GoBackTop("goBackTop-tab1", "tab1");
     goBackTop.GoBackTop("goBackTop-tab2", "tab2");
 
+
+    //
+    /*phoneBack(function() {
+        $(".prj-view").addClass('none');
+        $("#index-weui-page").removeClass('none');
+    });*/
+
     //
     $("#prj-filtrate-open-icon").on("click", function() {
-        //添加历史记录
-        history.pushState({ prjCoverFloor: "prj-cover-floor" }, "");
-        //添加sessionStorage
-        sessionStorage.prjCoverFloor = true;
-        sessionStorage.prjSessionArry ? sessionStorage.prjSessionArry.push("prj-cover-floor") : ["prj-cover-floor"];
         $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
         $("#prj-filtrate-block").removeClass("none").addClass("active");
+        phoneBack(function() {
+            $("#prj-cover-floor").attr("active") ? $("#prj-cover-floor").removeClass("active") : $("#prj-cover-floor").addClass("active");
+            $("#prj-filtrate-block").removeClass("active").addClass("none");
+            $("#prj-cover-floor").removeClass("active").addClass("none");
+        });
     });
     //点击浮层隐藏右弹框
     $("#prj-cover-floor").on("click", function() {
@@ -64,41 +71,38 @@ define(["goBackTop"], function(goBackTop) {
 
     //联系我们
     $("#contact-us-btn").on("click", function() {
-        //添加历史记录
-        history.pushState({ contactUsPage: "contact-us-page" }, "");
-        //添加sessionStorage
-        sessionStorage.contactUsPage = true;
-        sessionStorage.prjSessionArry ? sessionStorage.prjSessionArry.push("contact-us-page") : ["contact-us-page"];
         $("#contact-us-page").removeClass('none');
         $("#index-weui-page").addClass('none');
+        phoneBack(function() {
+            $("#contact-us-page").addClass('none');
+            $("#index-weui-page").removeClass('none');
+        });
     });
     //我的PC直播间
     $("#my-pc-room").on("click", function() {
-        //添加历史记录
-        history.pushState({ myPcRoom: "my-pc-room" }, "");
-        //添加sessionStorage
-        sessionStorage.myPcRoom = true;
         $("#my-pc-room-page").removeClass('none');
         $("#index-weui-page").addClass('none');
+        phoneBack(function() {
+            $("#my-pc-room-page").addClass('none');
+            $("#index-weui-page").removeClass('none');
+        });
     });
     //我的全能币
     $("#my-integral").on("click", function() {
-        //添加历史记录
-        history.pushState({ myIntegral: "my-integral" }, "");
-        //添加sessionStorage
-        sessionStorage.myIntegral = true;
-        sessionStorage.prjSessionArry = sessionStorage.prjSessionArry + "|" + "my-integral-page";
         $("#my-integral-page").removeClass('none');
         $("#index-weui-page").addClass('none');
+        phoneBack(function() {
+            $("#my-integral-page").addClass('none');
+            $("#index-weui-page").removeClass('none');
+        });
     });
     //全能币提现
     $("#withdraw-cash-btn").on("click", function() {
-        //添加历史记录
-        history.pushState({ withdrawCash: "withdraw-cash" }, "");
-        //添加sessionStorage
-        sessionStorage.withdrawCash = true;
-        sessionStorage.prjSessionArry = sessionStorage.prjSessionArry + "|" + "withdraw-cash-page";
         $("#withdraw-cash-page").removeClass('none');
         $("#my-integral-page").addClass('none');
+        phoneBack(function() {
+            $("#withdraw-cash-page").addClass('none');
+            $("#my-integral-page").removeClass('none');
+        });
     });
 })
