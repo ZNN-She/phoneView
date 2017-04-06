@@ -15,21 +15,23 @@ define(["phoneback", "goBackTop"], function(phoneback, goBackTop) {
             location.reload();
         }
     });*/
-
     $("#tab1").pullToRefresh().on("pull-to-refresh", function() {
-        console.log(1);
         $("#tab1 .content-padded").append('<h1>页面一</h1>');
         $("#tab1").pullToRefreshDone();
     });
     $("#tab2").pullToRefresh().on("pull-to-refresh", function() {
-        console.log(2);
-        $("#tab2 .content-padded").append('<h1>页面二</h1>');
+        $("#tab2 .content-padded").append('<h1>页面一</h1>');
         $("#tab2").pullToRefreshDone();
+    });
+    $("#tab3").pullToRefresh().on("pull-to-refresh", function() {
+        $("#tab3 .content-padded").append('<h1>页面二</h1>');
+        $("#tab3").pullToRefreshDone();
     });
 
     // 上拉加载
     var loading_1 = false,
-        loading_2 = false;
+        loading_2 = false,
+        loading_3 = false;
     $("#tab1").infinite().on("infinite", function() {
         if (loading_1) return;
         loading_1 = true;
@@ -38,14 +40,21 @@ define(["phoneback", "goBackTop"], function(phoneback, goBackTop) {
     });
     $("#tab2").infinite().on("infinite", function() {
         if (loading_2) return;
-        loading_1 = true;
+        loading_2 = true;
         $("#tab2 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
         loading_2 = false;
+    });
+    $("#tab3").infinite().on("infinite", function() {
+        if (loading_3) return;
+        loading_3 = true;
+        $("#tab3 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
+        loading_3 = false;
     });
 
     // go back top
     goBackTop.GoBackTop("goBackTop-tab1", "tab1");
     goBackTop.GoBackTop("goBackTop-tab2", "tab2");
+    goBackTop.GoBackTop("goBackTop-tab3", "tab3");
 
     $("#weui-tabbar").on("click", ".weui-tabbar__item", function(argument) {
         $(".go-back-top").css({ "display": "none" });
@@ -55,6 +64,9 @@ define(["phoneback", "goBackTop"], function(phoneback, goBackTop) {
                 break;
             case "#tab2":
                 $("#goBackTop-tab2").css({ "display": "block" });
+                break;
+            case "#tab3":
+                $("#goBackTop-tab3").css({ "display": "block" });
                 break;
         }
     });
@@ -93,6 +105,6 @@ define(["phoneback", "goBackTop"], function(phoneback, goBackTop) {
         });
     });
     $("#my-integral").on("click", function() {
-        window.location.href="view/page/myIntegral"
+        window.location.href = "view/page/myIntegral"
     });
 })

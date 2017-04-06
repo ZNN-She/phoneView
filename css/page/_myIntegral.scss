@@ -1,26 +1,36 @@
-.my-integral-page{
-	#withdraw-password-page, #setting-password-page{
-		margin-top: 25%;
-		border: .01rem solid $border;
-		border-left: 0;
-		border-right: 0;
-		background: #fff;
-		p{
-			font-size: 20px;
-			padding: 10px .24rem;
-		}
-		input{
-			height: 40px;
-			font-size: 30px;
-			line-height: 40px;
-		}
-	}
-	#integral-bill-page{
-		.weui-tab__bd .weui-tab__bd-item{
-			width: 100%;
-		}
-		.content-padded{
-			background: #fff;
-		}
-	}
+.my-integral-page {
+    #withdraw-password-page,
+    #setting-password-page {
+        margin-top: 25%;
+        border: .01rem solid $border;
+        border-left: 0;
+        border-right: 0;
+        background: #fff;
+        p {
+            font-size: 20px;
+            padding: 10px .24rem;
+        }
+        input {
+            height: 40px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    #integral-bill-page {
+        .weui-tab__bd .weui-tab__bd-item {
+            width: 100%;
+        }
+        .content-padded {
+            background: #fff;
+        }
+    }
+    .integral-info{
+    	padding: .24rem;
+    }
+    .list-normal-item {
+        height: 1.2rem;
+        .pic.text {
+        	line-height: 1.2rem;
+        }
+    }
 }

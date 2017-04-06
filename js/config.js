@@ -21,6 +21,7 @@ var REQUIRY_CONFIG = {
         "index_weui": "page/index_weuiCtrl",
         "myTaskList": "page/myTaskListCtrl",
         "myIntegral": "page/myIntegralCtrl",
+        "redManDetail": "page/redManDetailCtrl",
         "signIn": "page/signInCtrl",
         "test": "page/test"
     },
