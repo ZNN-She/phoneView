@@ -2,1495 +2,198 @@
 <html lang="en" style="height: 100%;">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1" />
     <!-- 网易-->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- 删除苹果默认的工具栏和菜单栏 -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- 设置苹果工具栏颜色 -->
-    <meta name="format-detection" content="telphone=no, email=no">
+    <meta name="format-detection" content="telphone=no, email=no" />
     <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
     <!-- 启用360浏览器的极速模式(webkit) -->
-    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="webkit" />
     <!-- 避免IE使用兼容模式 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-    <meta name="HandheldFriendly" content="true">
+    <meta name="HandheldFriendly" content="true" />
     <!-- 微软的老式浏览器 -->
-    <meta name="MobileOptimized" content="320">
+    <meta name="MobileOptimized" content="320" />
     <!-- uc强制竖屏 -->
-    <meta name="screen-orientation" content="portrait">
+    <meta name="screen-orientation" content="portrait" />
     <!-- QQ强制竖屏 -->
-    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait" />
     <!-- UC强制全屏 -->
-    <meta name="full-screen" content="yes">
+    <meta name="full-screen" content="yes" />
     <!-- QQ强制全屏 -->
-    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-fullscreen" content="true" />
     <!-- UC应用模式 -->
-    <meta name="browsermode" content="application">
+    <meta name="browsermode" content="application" />
     <!-- QQ应用模式 -->
-    <meta name="x5-page-mode" content="app">
+    <meta name="x5-page-mode" content="app" />
     <!-- windows phone 点击无高光 -->
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="js/lib/JQWeui/weui.css">
-    <link rel="stylesheet" href="js/lib/JQWeui/jquery-weui.css">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="js/lib/JQWeui/weui.css" />
+    <link rel="stylesheet" href="js/lib/JQWeui/jquery-weui.css" />
+    <title>
+        weui
+    </title>
     <style>
-    .background-base {
-        background: #f0eef5;
+    .wrap {
+        margin: 10px auto;
+        width: 329px;
+        height: 640px;
+        padding-top: 200px;
     }
     
-    .link-base {
-        color: #222222;
-    }
-    
-    .text-base {
-        color: #222222;
-    }
-    
-    .text-black {
-        color: #222222;
-    }
-    
-    .text-white {
-        color: #ffffff;
-    }
-    
-    .text-gery {
-        color: #666666;
-    }
-    
-    .text-grey-hint {
-        color: #8e8e93;
-    }
-    
-    .text-red {
-        color: #fe6c79;
-    }
-    
-    .text-yellow {
-        color: #fff000;
-    }
-    
-    .text-blue {
-        color: #43b1ff;
-    }
-    
-    .text-green {
-        color: #4ab300;
-    }
-    
-    .font-size-30 {
-        font-size: .30rem;
-    }
-    
-    .font-size-28,
-    .font-size-title {
-        font-size: .28rem;
-    }
-    
-    .font-size-24,
-    .font-size-base {
-        font-size: .24rem;
-    }
-    
-    .font-size-22 {
-        font-size: .22rem;
-    }
-    
-    .font-size-20 {
-        font-size: .20rem;
-    }
-    
-    html {
-        width: 100%;
-        min-height: 100%;
-        height: 100%;
-        font-size: 16px;
-        line-height: 1.6;
-    }
-    /* 
-@media only screen and (min-width: 240px) {
-    html {
-        165px;
-        font-size: 100% !important;
-    }
-}
-
-@media only screen and (min-width: 320px) {
-    html {
-        21.333
-        font-size: 133.333% !important;
-    }
-}
-
-@media only screen and (min-width: 480px) {
-    html {
-        32px
-        font-size: 200% !important;
-    }
-}
-
-@media only screen and (min-width: 540px) {
-    html {
-        48px
-        font-size: 300% !important;
-    }
-}
-
-@media only screen and (min-width: 640px) {
-    html {
-        42.6667px
-        font-size: 266.667% !important;
-    }
-}
-
-@media only screen and (min-width: 720px) {
-    html {
-        48px
-        font-size: 300% !important;
-    }
-}
-
-@media only screen and (min-width: 750px) {
-    html {
-        50px
-        font-size: 312.5% !important;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    html {
-        51.2px
-        font-size: 320% !important;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    html {
-        53.3334px
-        font-size: 333.333% !important;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    html {
-        68.2667px
-        font-size: 426.666% !important;
-    }
-}
-
-@media only screen and (min-width: 2048px) {
-    html {
-        136.53333
-        font-size: 853.333% !important;
-    }
-} */
-    
-    body {
-        width: 100%;
-        min-height: 100%;
-        height: 100%;
-        overflow: hidden;
-        font-size: .24rem;
-        color: #222222;
-        background: #f0eef5;
-    }
-    
-    a {
-        color: #222222;
-        text-decoration: none;
-    }
-    
-    a:hover,
-    a:focus {
-        color: #222222;
-    }
-    
-    .prj-cells {
-        margin-top: 0;
-        font-size: .3rem;
-        color: #222222;
-    }
-    
-    .prj-cells:before {
-        border-top: 0;
-    }
-    
-    .prj-cells:after {
-        border-bottom: 0;
-    }
-    
-    .prj-cells .weui-cell {
-        height: .8rem;
-        line-height: .8rem;
-        padding: 0 .24rem;
-    }
-    
-    .prj-cells .weui-cell:before {
-        border-top: 1px solid #c8c7cc;
-        color: #c8c7cc;
-    }
-    
-    .prj-cells .weui-cell .weui-cell__ft {
-        color: #8e8e93;
-        font-size: .22rem;
-    }
-    
-    .prj-cells .weui-cell.weui-cell_access .weui-cell__ft:after {
-        content: " ";
-        display: inline-block;
-        height: .15rem;
-        width: .15rem;
-        border-width: .02rem .02rem 0 0;
-        border-color: #8e8e93;
-        border-style: solid;
-        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    .inputBoxContainer {
+        width: 240px;
+        height: 50px;
+        margin: 0 auto;
         position: relative;
-        top: -0.02rem;
+    }
+    
+    .inputBoxContainer .bogusInput {
+        width: 100%;
+        height: 100%;
+        border: #c3c3c3 1px solid;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        overflow: hidden;
         position: absolute;
-        top: 50%;
-        margin-top: -0.08rem;
+        z-index: 0;
     }
     
-    .prj-list {
+    .inputBoxContainer .realInput {
         width: 100%;
-        box-sizing: border-box;
-        background-color: #fff;
-    }
-    
-    .prj-list .prj-list-normal {
-        padding-left: .24rem;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item {
-        height: 1.6rem;
-        padding: .2rem .24rem .2rem 0;
-        background-color: #fff;
-        border-bottom: 0.01rem solid #c8c7cc;
-        display: flex;
-        position: relative;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item:last-child {
-        border-bottom: 0;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .pic {
-        width: 1.6rem;
-        height: 1.6rem;
-        text-align: center;
-        margin-right: .2rem;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .pic img {
-        max-width: 100%;
-        max-height: 100%;
-        display: inline-block;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content {
-        flex: 1;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content .content-hd {
-        height: .28rem;
-        font-size: .28rem;
-        line-height: .28rem;
-        margin-top: .12rem;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content .content-hd .ft {
-        color: #666666;
-        font-size: .22rem;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content .content-bd {
-        font-size: .3rem;
-        line-height: .3rem;
-        margin-top: .34rem;
-        color: #fe6c79;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content .content-bd .ft {
-        color: #8e8e93;
-        font-size: .22rem;
-    }
-    
-    .prj-list .prj-list-normal .list-normal-item .content .content-ft {
-        font-size: .22rem;
-        margin-top: .12rem;
-        color: #666666;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .prj-list .prj-list-square {
-        padding: 0px;
-        background-color: #fff;
-    }
-    
-    .prj-list .prj-list-square .list-square-item {
-        float: left;
-        width: 50%;
-        margin-left: -1px;
-        padding: .1rem 0;
-        overflow: hidden;
-    }
-    
-    .prj-list .prj-list-square .list-square-item .item-content {
-        display: block;
-        margin: 0 .1rem;
-        background: #fff;
-    }
-    
-    .prj-list .prj-list-square .list-square-item .item-content .p {
-        display: block;
-        width: 100%;
-        margin-bottom: .05rem;
-        margin-left: 0;
-        overflow: hidden;
-        text-align: center;
-    }
-    
-    .prj-list .prj-list-square .list-square-item .item-content .p .p-inner {
-        line-height: 1.26rem;
-        border: none;
-        background: none;
-        text-align: center;
-        width: 100%;
-        padding: 50% 0;
-        height: 0;
-        display: inline-block;
-        position: relative;
-    }
-    
-    .prj-list .prj-list-square .list-square-item .item-content .p .p-pic {
-        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        opacity: 0;
     }
     
-    .prj-list .prj-list-square .list-square-item .item-content .d {
-        height: .8rem;
-        padding-left: .07rem;
-        padding-right: .07rem;
+    .inputBoxContainer .bogusInput input {
+        padding: 0;
+        width: 16.3%;
+        height: 100%;
+        float: left;
+        background: #ffffff;
+        text-align: center;
+        font-size: 20px;
+        border: none;
+        border-right: #C3C3C3 1px solid;
     }
     
-    .prj-list .prj-list-square .list-square-item .item-content .d .d-title {
-        color: #222222;
-        font-size: .28rem;
-        overflow: hidden;
+    .inputBoxContainer .bogusInput input:last-child {
+        border: none;
+    }
+    
+    .confirmButton {
+        width: 240px;
+        height: 45px;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        background: #f4f4f4;
+        border: #d5d5d5 1px solid;
         display: block;
-        height: .28rem;
-        line-height: .28rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-top: .06rem;
+        font-size: 16px;
+        margin: 30px auto;
+        margin-bottom: 20px;
     }
     
-    .prj-list .prj-list-square .list-square-item .item-content .d .d-bd {
-        height: .22rem;
-        font-size: .22rem;
-        line-height: .22rem;
-        color: #666666;
-        margin-top: .05rem;
-        overflow: hidden;
-    }
-    
-    .prj-list .prj-list-square .list-square-item .item-content .d .d-ft {
-        height: .20rem;
-        font-size: .20rem;
-        line-height: .20rem;
-        color: #8e8e93;
-        margin-top: .05rem;
-    }
-    
-    .prj-list .prj-list-picture {
-        padding: 0 .14rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item {
-        width: 3.56rem;
-        height: 5.10rem;
-        margin-top: .14rem;
-        border-radius: .06rem;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item .pic {
-        width: 100%;
-        height: 100%;
+    .showValue` {
+        width: 240px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 16px;
         text-align: center;
+        margin: 0 auto;
     }
-    
-    .prj-list .prj-list-picture .list-picture-item .pic img {
-        max-width: 100%;
-        max-height: 100%;
-        line-height: 3.65rem;
-        vertical-align: middle;
-        border: 0;
-        display: inline-block;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item .shade {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, #fff, #000);
-        opacity: 0.2;
-        border-radius: 0.06rem;
-        position: absolute;
-        top: 0;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item .text {
-        width: 100%;
-        height: .7rem;
-        color: #fff;
-        padding: 0 .12rem;
-        position: absolute;
-        bottom: .2rem;
-        box-sizing: border-box;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item .text .text-hd {
-        font-size: .28rem;
-        line-height: .28rem;
-        height: .28rem;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    
-    .prj-list .prj-list-picture .list-picture-item .text .text-bd {
-        font-size: .22rem;
-        line-height: .28rem;
-        margin-top: .2rem;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .prj-list .tag-blue {
-        height: .32rem;
-        padding: 0 .05rem;
-        color: #43b1ff;
-        border: 0.02rem solid #43b1ff;
-    }
-    
-    .prj-list .btn {
-        width: 1.34rem;
-        height: .44rem;
-        font-size: .22rem;
-        line-height: .44rem;
-        color: #fff;
-        border: 0;
-        border-radius: .05rem;
-        position: relative;
-    }
-    
-    .prj-list .btn .btn-ft:before {
-        content: " ";
-        display: inline-block;
-        height: .15rem;
-        width: .15rem;
-        border-width: .02rem .02rem 0 0;
-        border-color: #FFFFFF;
-        border-style: solid;
-        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        position: relative;
-        top: -0.02rem;
-        position: absolute;
-        top: 50%;
-        right: .1rem;
-        margin-top: -0.08rem;
-    }
-    
-    .prj-list .btn-red {
-        background: #fe6c79;
-    }
-    
-    .prj-list .btn-gery {
-        background: #c5c5c5;
-    }
-    
-    .prj-user-info {
-        height: 2.3rem;
-        background: #fe6c79;
-        display: flex;
-        box-sizing: border-box;
-        padding: .5rem 0;
-    }
-    
-    .prj-user-info .pic {
-        width: 1.3rem;
-        height: 1.3rem;
-        margin-left: .24rem;
-        margin-right: .2rem;
-        border-radius: .05rem;
-        border: .02rem solid #fff;
-        position: relative;
-        text-align: center;
-    }
-    
-    .prj-user-info .pic img {
-        max-width: 100%;
-        max-height: 100%;
-        display: inline-block;
-    }
-    
-    .prj-user-info .pic .icon {
-        position: absolute;
-        width: .3rem;
-        height: .3rem;
-        border-radius: .15rem;
-        background-size: contain;
-        bottom: -0.1rem;
-        right: -0.1rem;
-    }
-    
-    .prj-user-info .pic .icon.woman {
-        background-image: url(../img/common/woman-icon.png);
-    }
-    
-    .prj-user-info .pic .icon.man {
-        background-image: url(../img/common/man-icon.png);
-    }
-    
-    .prj-user-info .info {
-        flex: 1;
-    }
-    
-    .prj-user-info .info .name {
-        margin-top: .12rem;
-        font-size: .28rem;
-        line-height: .28rem;
-        color: #fff;
-    }
-    
-    .prj-user-info .info .sub {
-        margin-top: .12rem;
-        font-size: .22rem;
-        line-height: .22rem;
-        color: #fff;
-    }
-    
-    .prj-user-info .info .footer {
-        margin-top: .10rem;
-        font-size: .22rem;
-    }
-    
-    .prj-user-info .info .footer .ft-tag {
-        width: 1.24rem;
-        height: .36rem;
-        line-height: .36rem;
-        background: #eb4f5d;
-        color: #fff000;
-        text-align: center;
-        border-radius: .05rem;
-    }
-    
-    .prj-user-info .operation .inner {
-        height: .62rem;
-        margin-top: .34rem;
-        padding: .16rem .24rem;
-        font-size: .24rem;
-        background: #dc3b4b;
-        color: #fff;
-        box-sizing: border-box;
-        border-top-left-radius: .25rem;
-        border-bottom-left-radius: .25rem;
-    }
-    
-    .prj-user-info .operation .inner .icon {
-        display: inline-block;
-        width: .3rem;
-        height: .3rem;
-        border-radius: .15rem;
-        background-image: url(../img/common/money-icon.png);
-        background-size: contain;
-    }
-    
-    .prj-user-info .operation .inner .text {
-        display: inline-block;
-        line-height: .3rem;
-        vertical-align: top;
-        position: relative;
-    }
-    
-    .prj-user-info .operation .inner .text:after {
-        content: " ";
-        display: inline-block;
-        height: .15rem;
-        width: .15rem;
-        border-width: 0.02rem 0.02rem 0 0;
-        border-color: #fff;
-        border-style: solid;
-        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        position: relative;
-        top: -0.02rem;
-        position: absolute;
-        top: 50%;
-        margin-top: -0.08rem;
-    }
-    
-    .prj-flow {
-        height: 1.7rem;
-        padding: .4rem .05rem;
-        color: #666666;
-        background: #fff;
-        display: flex;
-        box-sizing: border-box;
-    }
-    
-    .prj-flow .item {
-        text-align: center;
-        flex: 1;
-    }
-    
-    .prj-flow .item .icon {
-        width: .48rem;
-        height: .48rem;
-        background: #8e8e93;
-        margin-bottom: .25rem;
-        display: inline-block;
-        position: relative;
-    }
-    
-    .prj-flow .item .text {
-        font-size: .22rem;
-        line-height: .22rem;
-    }
-    
-    .prj-flow .item .mark {
-        width: .3rem;
-        height: .3rem;
-        font-size: .2rem;
-        text-align: center;
-        vertical-align: bottom;
-        color: #fe6c79;
-        background: #fff;
-        border-radius: 50%;
-        border: 2px solid #fe6c79;
-        position: absolute;
-        top: -0.1rem;
-        right: -0.1rem;
-    }
-    
-    .prj-title {
-        height: .9rem;
-        font-size: .3rem;
-        line-height: .9rem;
-        padding-left: .24rem;
-        color: #222222;
-        background: #fff;
-        position: relative;
-    }
-    
-    .prj-title.prj-title-active:active {
-        background: #f0eef5;
-    }
-    
-    .prj-title a {
-        color: #222222;
-    }
-    
-    .prj-title .inner {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #c8c7cc;
-        padding-right: .48rem;
-    }
-    
-    .prj-title .inner .footer {
-        font-size: .22rem;
-        color: #8e8e93;
-    }
-    
-    .prj-title .inner .footer:after {
-        content: " ";
-        display: inline-block;
-        height: .15rem;
-        width: .15rem;
-        border-width: .02rem .02rem 0 0;
-        border-color: #8e8e93;
-        border-style: solid;
-        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        position: relative;
-        top: -0.02rem;
-        position: absolute;
-        top: 50%;
-        margin-top: -0.08rem;
-        right: .24rem;
-    }
-    
-    .prj-top-banner {
-        height: 2.3rem;
-        text-align: center;
-    }
-    
-    .prj-top-banner img {
-        max-height: 100%;
-        max-width: 100%;
-    }
-    
-    .go-back-to-top {
-        background-size: 100%;
-        background-image: url(../img/go-back-to-top.png);
-        position: fixed;
-        z-index: 100;
-        right: 8px;
-        bottom: 68px;
-        width: 35px;
-        height: 35px;
-    }
-    
-    .prj-interval-row {
-        margin-bottom: .2rem;
-    }
-    
-    .index-weui {
-        /*jqueryWeui*/
-    }
-    
-    .index-weui .weui-tab .weui-tab__bd .weui-pull-to-refresh {
-        margin-top: -100px;
-    }
-    
-    .index-weui .weui-tab__bd .weui-tab__bd-item {
-        width: 100%;
-    }
-    
-    .index-weui #tab3 .content-padded {
-        background: #ececec;
-        overflow: hidden;
-    }
-    
-    .index-weui #tab3 .content-padded .interval-10 {
-        margin-bottom: 0.1rem;
-    }
-    
-    .index-weui #tab3 .content-padded .banner {
-        height: 1.5rem;
-        padding: 0.1rem 0 .1rem .1rem;
-        box-sizing: border-box;
-        background: #fff;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        display: flex;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .pic {
-        width: 1.3rem;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .pic .img {
-        width: 100%;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .content {
-        flex-grow: 1;
-        margin: 0 0.1rem;
-        position: relative;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .content .hd {
-        font-size: .24rem;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .content .ft {
-        height: .3rem;
-        position: absolute;
-        bottom: 0;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .content .ft .img {
-        height: 100%;
-        width: 1.3rem;
-        border-radius: .75rem;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .target {
-        width: 1.7rem;
-        font-size: .28rem;
-    }
-    
-    .index-weui #tab3 .content-padded .banner .target .inner {
-        margin-top: 0.43rem;
-        border: .03rem solid #ff5000;
-        border-right: 0;
-        border-top-left-radius: .13rem;
-        border-bottom-left-radius: .13rem;
-    }
-    
-    .index-weui #tab3 .content-padded .info {
-        height: 2rem;
-        box-sizing: box-border;
-        padding: .2rem;
-        border-bottom: 0.05rem solid #ddd;
-        background: #fff;
-        display: flex;
-    }
-    
-    .index-weui #tab3 .content-padded .info .pic .img {
-        height: 1.6rem;
-        width: 2.1rem;
-        margin-right: .1rem;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content {
-        flex: 1;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content .title {
-        font-size: .24rem;
-        height: .9rem;
-        line-height: .4rem;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content .title .text-warning {
-        color: #ff5813;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content .text {
-        font-size: .2rem;
-        height: .35rem;
-        display: flex;
-        justify-content: space-between;
-        color: #666666;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content .text .txt-item {
-        flex-grow: 1;
-    }
-    
-    .index-weui #tab3 .content-padded .info .content .footer {
-        font-size: .2rem;
-        height: .35rem;
-        color: #ff5813;
-    }
-    
-    .index-weui #tab3 .content-padded .flow {
-        height: 2.05rem;
-        display: flex;
-        background: #fff;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item {
-        color: #ececec;
-        text-align: center;
-        flex: 1;
-        position: relative;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item .icon {
-        background: #ececec;
-        width: 1rem;
-        height: 1rem;
-        border-radius: .5rem;
-        margin-bottom: .2rem;
-        padding: .1rem;
-        box-sizing: border-box;
-        display: inline-block;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item .icon img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item .text {
-        text-align: center;
-        font-size: .2rem;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item .border {
-        background: #ececec;
-        border: 1px dashed #fff;
-        position: absolute;
-        top: .5rem;
-        width: 100%;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item.active {
-        color: #ff5000;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item.active .icon {
-        background: #ff5000;
-    }
-    
-    .index-weui #tab3 .content-padded .flow .flow-item.active .border {
-        background: #ff5000;
-        border: 1px dashed #fff;
-    }
-    
-    .index-weui #tab3 .content-padded .label {
-        height: 1rem;
-        color: #ff5000;
-        font-size: .28rem;
-        background: #fff;
-        line-height: .8rem;
-        padding: .2rem;
-    }
-    
-    .index-weui #tab3 .content-padded .title-photo {
-        padding: 0.1rem 0 0.4rem 0;
-        background: #fff;
-        display: flex;
-        overflow-x: auto;
-    }
-    
-    .index-weui #tab3 .content-padded .title-photo .item {
-        margin-right: .1rem;
-    }
-    
-    .index-weui #tab3 .content-padded .title-photo .item img {
-        height: 3rem;
-        width: 3rem;
-    }
-    
-    .index-weui #tab3 .content-padded .title-photo .item .text {
-        font-size: .2rem;
-        background: #ececec;
-        padding: .1rem;
-    }
-    
-    .index-weui #tab3 .content-padded .title-text {
-        font-size: .24rem;
-        background: #fff;
-        padding: .2rem;
-    }
-    
-    .index-weui #tab3 .content-padded .footer {
-        height: 1rem;
-    }
-    
-    .index-weui .red-member-center {
-        min-height: 100%;
-    }
-    /*# sourceMappingURL=main_weui.css.map */
     </style>
-    <title>weui</title>
 </head>
 
 <body ontouchstart>
-    <div id="tab2" class="weui-tab__bd-item weui-pull-to-refresh" style="">
-        <!--刷新提示文字  -->
-        <div class="weui-pull-to-refresh__layer" style="padding-top: -100px;">
-            <div class='weui-pull-to-refresh__arrow'></div>
-            <div class='weui-pull-to-refresh__preloader'></div>
-            <div class="down">下拉刷新</div>
-            <div class="up">释放刷新</div>
-            <div class="refresh">正在刷新</div>
-        </div>
-        <div class="content-padded">
-            <div class="slide-banner">
-                <div class="slider-banner-main"></div>
-                <div class="slider-banner-extend"></div>
-            </div>
-            <div class="floor">
-                <div class="floor-title"></div>
-                <div class="floor-content">
-                    <!-- 列表 块状 -->
-                    <div class="prj-list">
-                        <ul class="prj-list-square">
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i2/TB1LTixKFXXXXb3XXXXXXXXXXXX_!!0-item_pic.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-square-item">
-                                <div class="item-content">
-                                    <div class="p">
-                                        <div class="p-inner">
-                                            <img src="http://gw3.alicdn.com/bao/uploaded/i3/2018429023/TB2gOI7gbplpuFjSspiXXcdfFXa_!!2018429023.jpg_250x250.jpg" alt="" class="p-pic">
-                                        </div>
-                                    </div>
-                                    <div class="d">
-                                        <div class="d-title">
-                                            的时间发链接阿里的是的撒放假啦涉及到法律
-                                        </div>
-                                        <div class="d-bd">123</div>
-                                        <div class="d-ft">
-                                            是多少啊
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 回顶部按钮 -->
-                    <span class="go-back-to-top"></span>
-                </div>
+    <div class="wrap">
+        <div class="inputBoxContainer" id="inputBoxContainer">
+            <input type="text" class="realInput" />
+            <div class="bogusInput">
+                <input type="password" maxlength="6" disabled/>
+                <input type="password" maxlength="6" disabled/>
+                <input type="password" maxlength="6" disabled/>
+                <input type="password" maxlength="6" disabled/>
+                <input type="password" maxlength="6" disabled/>
+                <input type="password" maxlength="6" disabled/>
             </div>
         </div>
-        <!-- 上拉加载提示文字 -->
-        <div class="weui-loadmore">
-            <i class="weui-loading"></i>
-            <span class="weui-loadmore__tips">正在加载</span>
-        </div>
+        <button id="confirmButton" class="confirmButton">
+            查看
+        </button>
+        <p class="showValue" id="showValue"></p>
     </div>
-    <script src="js/lib/JQWeui/jquery-2.1.4.js"></script>
-    <script src="js/lib/JQWeui/fastclick.js"></script>
     <script>
-    $(function() {
-        FastClick.attach(document.body);
+    (function() {
+        var container = document.getElementById("inputBoxContainer");
+        boxInput = {
+            maxLength: "",
+            realInput: "",
+            bogusInput: "",
+            bogusInputArr: "",
+            callback: "",
+            init: function(fun) {
+                var that = this;
+                this.callback = fun;
+                that.realInput = container.children[0];
+                that.bogusInput = container.children[1];
+                that.bogusInputArr = that.bogusInput.children;
+                that.maxLength = that.bogusInputArr[0].getAttribute("maxlength");
+                that.realInput.oninput = function() {
+                    that.setValue();
+                }
+                that.realInput.onpropertychange = function() {
+                    that.setValue();
+                }
+            },
+            setValue: function() {
+                // this.realInput.value = this.realInput.value.replace(/\D/g, "");
+                console.log(this.realInput.value);
+                var real_str = this.realInput.value;
+                for (var i = 0; i < this.maxLength; i++) {
+                    this.bogusInputArr[i].value = real_str[i] ? real_str[i] : "";
+                }
+                if (real_str.length >= this.maxLength) {
+                    this.realInput.value = real_str.substring(0, 6);
+                    this.callback();
+                }
+            },
+            getBoxInputValue: function() {
+                var realValue = "";
+                for (var i in this.bogusInputArr) {
+                    if (!this.bogusInputArr[i].value) {
+                        break;
+                    }
+                    realValue += this.bogusInputArr[i].value;
+                }
+                return realValue;
+            }
+        }
+    })()
+    boxInput.init(function() {
+        getValue();
     });
-    </script>
-    <script src="js/lib/JQWeui/jquery-weui.js"></script>
-    <script>
-    $("#tab1").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(1);
-            $("#tab1 .content-padded").append('<h1>页面一</h1>');
-            $("#tab1").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab2").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(2);
-            $("#tab2 .content-padded").append('<h1>页面二</h1>');
-            $("#tab2").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab3").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(3);
-            $("#tab3 .content-padded").append('<h1>页面三</h1>');
-            $("#tab3").pullToRefreshDone();
-        }, 2000);
-    });
-    $("#tab4").pullToRefresh().on("pull-to-refresh", function() {
-        setTimeout(function() {
-            console.log(4);
-            $("#tab4 .content-padded").append('<h1>页面四</h1>');
-            $("#tab4").pullToRefreshDone();
-        }, 2000);
-    });
+    document.getElementById("confirmButton").onclick = function() {
+        getValue();
+    }
 
-    // 上拉加载
-    var loading_1 = false,
-        loading_2 = false,
-        loading_3 = false,
-        loading_4 = false;
-    $("#tab1").infinite().on("infinite", function() {
-        if (loading_1) return;
-        loading_1 = true;
-        setTimeout(function() {
-            $("#tab1 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_1 = false;
-        }, 2000);
-    });
-    $("#tab2").infinite().on("infinite", function() {
-        if (loading_2) return;
-        loading_1 = true;
-        setTimeout(function() {
-            $("#tab2 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_2 = false;
-        }, 2000);
-    });
-    $("#tab3").infinite().on("infinite", function() {
-        if (loading_3) return;
-        loading_3 = true;
-        $("#tab3 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-        loading_3 = false;
-    });
-    $("#tab4").infinite().on("infinite", function() {
-        if (loading_4) return;
-        loading_4 = true;
-        setTimeout(function() {
-            $("#tab4 .content-padded").append("<p>《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》英文版有1100多页，教学内容非常丰富，不但涵盖了人工智能基础、问题求解、知识推理与规划等经典内容，而且还包括不确定知识与推理、机器学习、通讯感知与行动等专门知识的介绍。目前我们为本科生开设的学科基础必修课“人工智能导论”主要介绍其中的经典内容，而研究生必修的核心课程“人工智能原理”主要关注其中的专门知识。其实《世界著名计算机教材精选·人工智能:一种现代的方法(第3版)》也适合希望提高自身计算系统设计水平的广大应用计算技术的社会公众，对参加信息学奥林匹克竞赛和ACM程序设计竞赛的选手及其教练员也有一定的参考作用。</p>");
-            loading_4 = false;
-        }, 2000);
-    });
+    function getValue() {
+        document.getElementById("showValue").innerText = boxInput.getBoxInputValue();
+    }
     </script>
 </body>
 
